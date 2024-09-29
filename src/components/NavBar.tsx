@@ -2,8 +2,8 @@ function NavBar(){
 
     return(
         <>
-            <div className="container mx-auto lg">
-                Hi
+            <div className='w-48'>
+                <img src='public\ieee_logo.png' alt='ieee-logo' />
             </div>
         </>
     )
