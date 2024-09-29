@@ -3,8 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import NavBar from "./components/NavBar";
 import './App.css'
+import { Router } from 'express'
 
 function App() {
+<<<<<<< HEAD
   const [count, setCount] = useState(0)
 
   return (
@@ -31,7 +33,12 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+=======
+  return(
+  <>
+    Hello   
+  </>
+>>>>>>> f8f1d61a521f97d2000592869e502c4ef3214ade
   )
-}
-
+  }
 export default App
