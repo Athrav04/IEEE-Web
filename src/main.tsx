@@ -8,7 +8,7 @@ import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 // import Committee from './components/Committee.tsx';
 // import UserPage from './components/UserPage.tsx';
 // import About from './components/About.tsx';
-import { ErrorPage, Home, About, Committee, UserPage, Login } from './components/config.ts'
+import { ErrorPage, About, Committee, UserPage, Login } from './components/config.ts'
 
 const router = createBrowserRouter([
   {
