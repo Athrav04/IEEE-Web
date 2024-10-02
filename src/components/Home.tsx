@@ -5,9 +5,9 @@ const Home = () => {
     <>
     <div className='relative'>
       <div className='absolute inset-0 place-self-center content-center'>
-        <p className='font-montserrat font-black text-white text-3xl md:text-7xl'>IEEE VIIT Student Branch</p>
+        <p className='font-montserrat font-black text-center text-white text-3xl md:text-5xl md:text-7xl'>IEEE VIIT Student Branch</p>
         <div className='bg-sky-500'>
-          <button className='absolute inset-0 top-16 md:top-40 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
+          <button className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
         </div>
       </div>
       <img src='public\ieee-bg.jpeg' alt='ieee-bg' />
