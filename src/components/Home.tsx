@@ -10,7 +10,7 @@ const Home = () => {
           <button className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
         </div>
       </div>
-      <img src='public\ieee-bg.jpeg' alt='ieee-bg' />
+      <img src='/ieee-bg.jpeg' alt='ieee-bg' />
     </div>
     <div className='container mt-20 md:mt-28 w-auto text-wrap mx-8 md:mx-12 lg:mx-54 flex justify-center'>
       <p className='text-base md:text-4xl font-black text-sky-500'>Welcome to IEEE Student Branch</p>
