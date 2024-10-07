@@ -23,19 +23,26 @@ export default function UserForm() {
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center items-center">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center items-start gap-3 w-full">
       {/* register your input into the hook by invoking the "register" function */}
-      <input placeholder="11324" {...register("userId")} />
-      <input placeholder="John1" {...register("userName")} />
-
-
+      <div className="w-full">
+        <p className="text-sm text-gray-500 text-bold mb-1">UserName</p>
+       <input placeholder="John1" {...register("userName",{required:true})} className={`rounded-md pl-2 p-[4px] w-full bg-gray-100 ${errors.userName ? 'border-red-500' : 'border-[1px]'}`}/>
+      </div>
+    
       {/* include validation with required or other standard HTML validation rules */}
-      <input placeholder="password" {...register("password", { required: true , minLength : 6})} />
+      <div className="w-full">
+        <p className="text-sm text-gray-500 text-bold mb-1">password</p>
+        <input placeholder="password" {...register("password", { required: true , minLength : 6})} className={`border-[1px] rounded-md pl-2 p-[4px] w-full bg-gray-100 ${errors.password ? 'border-2 border-red-500' : 'border-[1px]'}`} />
+      </div>
+      
       {/* errors will return when field validation fails  */}
-      {errors.password && <span>This is a reuqired field</span>}
+      {/* {errors.password && <span className="text-sm text-red-500"> is a reuqired field</span>} */}
 
 
-      <input type="submit" />
+      <button type="submit" className=" cursor-pointer place-self-center w-full mt-2 p-1 bg-gradient-to-r from-sky-300 to-sky-500 rounded-md text-center items-center">
+        Login
+      </button>
     </form>
   )
 }
