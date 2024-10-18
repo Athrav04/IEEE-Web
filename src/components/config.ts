@@ -4,6 +4,8 @@ import ErrorPage from './ErrorPage'
 import Home from './Home'
 import Login from './Login'
 import UserPage from './UserPage'
+import UserForm from './UserForm'
+
 
 
 export {
@@ -12,5 +14,6 @@ export {
     ErrorPage,
     Home,
     Login,
-    UserPage
+    UserPage,
+    UserForm
 }
