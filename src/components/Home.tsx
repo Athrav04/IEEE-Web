@@ -5,7 +5,7 @@ const Home = () => {
     <>
     <div className='relative'>
       <div className='absolute inset-0 place-self-center content-center'>
-        <p className='font-montserrat font-black text-center text-white text-3xl md:text-5xl lg:text-7xl'>IEEE VIIT Student Branch</p>
+        <p className='font-montserrat font-black text-center text-white text-base md:text-5xl lg:text-6xl'>IEEE VIIT Student Branch</p>
         <div className='bg-sky-500'>
           <button className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
         </div>
@@ -25,7 +25,7 @@ const Home = () => {
     <div className='container my-4 w-auto text-xs text-wrap md:text-sm mx-8 md:mx-28 lg:mx-54 flex justify-center'>      
       Whether youre looking to enhance your skill, participate in exciting projects, or connect withlike-minded peers, IEEE Student Branch is your gateway to a world of possibilities. Join us in shaping the future of technology and engineering.
     </div>
-    <div className='flex justify-evenly mb-4 h-0.5 mx-auto w-96 bg-gradient-to-r from-white via-slate-500 to-white'/>
+    <div className='flex justify-evenly mb-4 h-0.5 mx-auto w-40 md:w-96 bg-gradient-to-r from-white via-slate-500 to-white'/>
     <div className="container my-4 w-auto text-xs text-wrap md:text-sm mx-8 md:mx-28 lg:mx-54 flex justify-center">
       Thank you for choosing Company LLC ("Company." "we""us,;" or "our'"). We are commited to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice with regard to your personal information, please contact us at privacy@company.com. The purpose of this privacy notice is to explain to you what information we collect, how we use it, and what rights you have in relation to it. If there are any terms in this privacy notice that you do not agree with, please discontinue use of our Services immediately. Please read this privacy notice carefully, as it will help you understand what we do with the information that we collect.
     </div>
