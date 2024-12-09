@@ -3,7 +3,8 @@ import Cards from './Cards'
 import Footer from './Footer'
 import NavBar from './NavBar'
 
-const Committee = () => {
+const Committee = (props: { src: string}) => {
+  const src = props.src;
   return (
     <div>
       <div>
@@ -18,22 +19,24 @@ const Committee = () => {
             Student Branch</p>
             <p className='font-mono text-center text-xs md:text-sm lg:text-base'>Advancing Technology for Humanity</p>
           </div>
-          <img className="object-fill h-44 lg:h-64 w-full" src='\committee-bg.jpg' alt='committee-bg' />
+          <img className="object-fill h-44 lg:h-64 w-full" src={src} alt='committee-bg' />
           <div className="bg-teal-200 w-40 md:w-64 m-1 text-center place-self-center text-sm md:text-base text-indigo-900">Committee</div>
           <div className='bg-gray-300 w-auto'>
             <p className='p-2 text-xs md:text-sm text-center'>IEEE-VIIT 2024-25</p>
           </div>
         </div>
         <div className="grid mx-10 md:grid-cols-2 md:mx-12 lg:grid-cols-3 lg:mx-24 ">
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
+          <Cards profile='\man.jpg'/>
         </div>
       </div>
       </div>

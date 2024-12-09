@@ -5,6 +5,7 @@ import Home from './Home'
 import Login from './Login'
 import UserPage from './UserPage'
 import UserForm from './UserForm'
+import Events from './Events'
 
 
 
@@ -15,5 +16,6 @@ export {
     Home,
     Login,
     UserPage,
-    UserForm
+    UserForm,
+    Events
 }
