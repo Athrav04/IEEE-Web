@@ -6,7 +6,8 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import './App.css';
 
-function App() {
+function App(props: { src: string }) {
+  const src = props.src;
   return(
   <>
   <div>
@@ -14,7 +15,7 @@ function App() {
         <div className='fixed top-0 z-10'>
           <NavBar/>
         </div>
-        <Home />
+        <Home src={src}/>
       </div>
   </div>
   <Footer/>

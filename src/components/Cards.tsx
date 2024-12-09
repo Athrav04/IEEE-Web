@@ -1,6 +1,7 @@
 import React from "react";
 
-const Cards = () => {
+const Cards = (props: {profile:string}) => {
+    let profile = props.profile;
     return(
         <div className="flex justify-center m-7 rounded-xl">
             <div className="relative">
@@ -8,7 +9,7 @@ const Cards = () => {
                 <p>Chetan G Kotangale</p>
                 Web Dev Joint Head 
             </div>
-            <img className="object-contain rounded-xl" src="/man.jpg" alt="/man.jpg"/>
+            <img className="object-contain rounded-xl" src={profile} alt="/man.jpg"/>
             </div>
         </div>
     )
