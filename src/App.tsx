@@ -4,19 +4,19 @@ import viteLogo from '/vite.svg'
 import NavBar from "./components/NavBar";
 import Home from './components/Home';
 import Footer from './components/Footer';
-import './App.css'
-import { Router } from 'express';
+import './App.css';
 
-function App() {
+function App(props: { src: string }) {
+  const src = props.src;
   return(
   <>
   <div>
-    <div className='relative'>
-      <div className='fixed top-0 z-10'>
-        <NavBar/>
+      <div className='relative'>
+        <div className='fixed top-0 z-10'>
+          <NavBar/>
+        </div>
+        <Home src={src}/>
       </div>
-        <Home/>
-    </div>
   </div>
   <Footer/>
   </>

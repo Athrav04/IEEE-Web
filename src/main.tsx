@@ -8,22 +8,22 @@ import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 // import Committee from './components/Committee.tsx';
 // import UserPage from './components/UserPage.tsx';
 // import About from './components/About.tsx';
-import { ErrorPage, About, Committee, UserPage, Login } from './components/config.ts'
+import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element: <App />,
+    element: <App src={'\ieee-bg.jpeg'}/>,
     errorElement:<ErrorPage />
   },
   {
-    path:'/About',
+    path:'/about',
     element:<About />,
     errorElement:<ErrorPage />
   },
   {
-    path:'/Committee',
-    element:<Committee />,
+    path:'/committee',
+    element:<Committee src={'\committee-bg.jpg'}/>,
     errorElement:<ErrorPage />
   },
   {
@@ -34,6 +34,11 @@ const router = createBrowserRouter([
   {
     path:'/Login',
     element:<Login />,
+    errorElement:<ErrorPage />
+  },
+  {
+    path:'/events',
+    element:<Events />,
     errorElement:<ErrorPage />
   }
 ])
