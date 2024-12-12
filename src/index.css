@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .main-bg{
+        @apply bg-[#0a0a0a]
+    }
+    .main-text-color {
+        @apply text-[#CED4DA]
+    }
+    .navBar-Item {
+        @apply px-3 font-light
+    }
+}

@@ -4,12 +4,20 @@ const Home = (props: { src: string }) => {
   const src = props.src;
   return (
     <>
-    <div className='relative'>
+    <div className='main-bg h-screen text-white p-5'>
+        <section className='flex justify-start items-center h-screen'>
+         <div className='flex-col justify-start items-center w-1/2'>
+            <h1 className='text-8xl'>IEEE VIIT</h1>
+            <h2>Student Branch</h2>
+         </div>
+         <div className='hidden md:flex justify-center items-center'>
+          Random image
+         </div>
+        </section>
+    </div>
+    {/* <div className='relative'>
       <div className='absolute inset-0 place-self-center content-center'>
         <p className='font-montserrat font-black text-center text-white text-base md:text-5xl lg:text-6xl'>IEEE VIIT Student Branch</p>
-        <div className='bg-sky-500'>
-          <button className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
-        </div>
       </div>
       <img src={src} alt='ieee-bg' />
     </div>
@@ -101,7 +109,7 @@ const Home = (props: { src: string }) => {
       <div className='flex justify-center'>
         <button className='m-6 top-16 md:top-40 bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-40 w-36 md:h-9 h-10 rounded-md'>Join Membership!!!</button>
       </div>
-    </div>
+    </div> */}
     </>
   )
 }
