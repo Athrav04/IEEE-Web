@@ -1,17 +1,26 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
+//Gradient text - #5899E2 to #FFFFFF
+//#1e90ff to # 99BADD
+//#4169e1 to #89CFF0
+ 
 const Home = (props: { src: string }) => {
+  const navigate = useNavigate()
   const src = props.src;
   return (
     <>
-    <div className='main-bg h-screen text-white p-5'>
+    <div className='main-bg h-screen text-white pl-10'>
         <section className='flex justify-start items-center h-screen'>
-         <div className='flex-col justify-start items-center w-1/2'>
-            <h1 className='text-8xl'>IEEE VIIT</h1>
-            <h2>Student Branch</h2>
+         <div className='flex-col justify-start items-center xl:w-1/2'>
+            <h1 className='text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent'>IEEE VIIT</h1>
+            <h2 className='text-6xl mt-1 font-light'>Student Branch</h2>
+            <div className='flex mt-2'>
+              <p className='font-montserrat px-1 cursor-default text-lg hover:border-b-2 ' onClick={()=>navigate('/about')}>About us</p>
+              <img src='/right-arrow.png' height={25} width={40} className='pl-2 hover:translate-x-1 ease-in duration-100' onClick={()=>navigate('/about')}></img>
+            </div>
          </div>
-         <div className='hidden md:flex justify-center items-center'>
-          Random image
+         <div className='hidden xl:flex justify-center items-center w-3/4 h-full object-cover'>
+            <img src='/electricalTempLogo.jpg' className='w-full h-full block gradient-mask-l-0'></img>
          </div>
         </section>
     </div>

@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+.gradient-text-2 {
+    background-image: linear-gradient(to top right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);
+    background-size: 200%;
+    background-clip: text;
+    text-decoration: transparent;
+}
+}
 
 @layer components {
     .main-bg{
@@ -10,6 +20,11 @@
         @apply text-[#CED4DA]
     }
     .navBar-Item {
-        @apply px-3 font-light
+        @apply px-3 font-light text-lg
     }
+    .gradient-text1 {
+        @apply bg-gradient-to-tr from-[#5899E2] via-[#FFFFFF] via-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent
+    }
+    
 }
+
