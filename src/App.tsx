@@ -15,7 +15,7 @@ function App(props: { src: string }) {
         <div className='fixed top-0 z-10'>
           <NavBar/>
         </div>
-        <Home src={src}/>
+        <Home video={src}/>
       </div>
   </div>
   <Footer/>
