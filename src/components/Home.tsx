@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
@@ -11,6 +10,8 @@ const Home = (props: { src: string }) => {
     <>
     <div className='main-bg min-h-screen text-white pl-10 flex-col '>
 
+        {//================================== Hero Section ===================================
+        }
         <section className='flex justify-start items-center h-screen'>
          <div className='flex-col justify-start items-center xl:w-1/2'>
             <h1 className=' text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'>IEEE VIIT</h1>
@@ -25,14 +26,22 @@ const Home = (props: { src: string }) => {
          </div>
         </section>
 
-        <section className='mt-0 min-h-screen w-full md:mt-10'>
+
+        <section className='mt-0 min-h-[50vh] md:min-h-[75vh] w-full md:mt-10'>
+
           <h1 className='text-2xl md:text-7xl font-icona mb-'> "Advancing Technology </h1>
-          <div className='ml-2 w-24 bg-blue-500 h-1 md:{ml-7 mt-1 h-2}'></div>
-          <h2 className=' text-2xl translate-x-8 md:translate-x-[330px] mt-1 md:mt-3  md:text-7xl font-icona'> For Humanity"</h2>
+          <div className='ml-2 w-24 bg-gradient-to-r from-[#5899E2] via-[#5899E2] to-[#FFFFFF] h-1 md:ml-7 md:mt-1 md:h-2 md:w-72'></div>
+          <h2 className=' text-2xl translate-x-8 md:translate-x-[330px] mt-1 md:mt-2  md:text-7xl font-icona'> For Humanity"</h2>
+          <div className=' w-24 translate-x-[70px] md:translate-x-[457px] bg-gradient-to-r from-[#FFFFFF] via-[#5899E2] to-[#5899E2] h-1 md:mt-1 md:h-2 md:w-[270px]'></div>
           <div className='text-lg md:text-2xl mt-10 md:mt-24 leading-2 ml-5 w-[52%] md:leading-9 font-montserrat '>
           <p>At IEEE Student Branch, we harness the potential of technology to create a vibrant community focused on electronics, electrical, and computer engineering.</p>
           </div>
           
+        </section>
+
+
+        <section className='min-h-screen w-full'>
+          <h1></h1>
         </section>
 
 
