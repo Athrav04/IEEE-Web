@@ -15,4 +15,13 @@ const Cards = (props: {profile:string}) => {
     )
 }
 
+// const ReverseCard = (props: {link:string}) => {
+//     let link = props.link;
+//     return(
+//         <div className="flex justify-center m-7 rounded-xl h-7">
+
+//         </div>
+//     )
+// }
+
 export default Cards
