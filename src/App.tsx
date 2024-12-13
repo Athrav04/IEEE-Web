@@ -8,7 +8,7 @@ function App(props: { src: string }) {
   return(
   <>
   <div>
-      <div className='relative'>
+      <div className='relative overflow-x-hidden'>
         <div className='fixed top-0 z-10'>
           <NavBar/>
         </div>

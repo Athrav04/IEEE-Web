@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.animate-Underline {
+    animation: animationUnderline;
+}
+
+@font-face {
+    font-family: 'icona';
+    src: url('/icona-sans-font-family-1734060842-0/IconaSansTRIAL-Black-BF6683702c8f768.otf');
+}
+
 @layer utilities {
 .gradient-text-2 {
     background-image: linear-gradient(to top right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);

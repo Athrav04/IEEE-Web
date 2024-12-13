@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcss from 'tailwindcss'
 export default {
   content: [
     "./index.html",
@@ -6,25 +7,36 @@ export default {
   ],
   theme: {
     extend: {
-      keyframes: {
-        
+      keyframes:{
+        animatedUnderline:{
+          '0%':{width:'0px'},
+          '15%':{width:'20px'},
+          '30%':{width:'30px'},
+          '50%': {width:'40px'},
+          '75%' : {width:'60px'},
+          '85%': {width:'75px'},
+          '90%': {width:'90px'},
+          '100%':{width:'96px'},
+
+        }
       },
-      backgroundImage: {
-        'dark-fade': 'linear-gradient(to left, #000000, #0A0A0A, #0A0A0A, #0A0A0A,#0A0A0A,#0A0A0A, #0A0A0A)'
+      animations:{
+        animatedUnderline : 'animateUnderline 3s linear '
+      },
+      backgroundSize: {
+        'auto':'auto',
+        'cover':'cover',
+        'contain':'contain',
+        "200%":'200%'
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        icona: ["icona"]
       },
       keyframes: {
-        translate: {
-          '0%': { transform: 'translate(0px, 0px)' },
-          '100%': { transform: 'translate(1px, 0px)' },
-        }
+        '0%':{'background-position':'('}
       },
-      animation: {
-        translate: 'translate 1s ease-in'
-      }
     },
   },
-  plugins: [require('tailwind-gradient-mask-image')],
+  plugins: [tailwindcss,require('tailwind-gradient-mask-image')]
 }

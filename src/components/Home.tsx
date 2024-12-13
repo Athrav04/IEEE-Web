@@ -9,20 +9,33 @@ const Home = (props: { src: string }) => {
   const src = props.src;
   return (
     <>
-    <div className='main-bg h-screen text-white pl-10'>
+    <div className='main-bg min-h-screen text-white pl-10 flex-col '>
+
         <section className='flex justify-start items-center h-screen'>
          <div className='flex-col justify-start items-center xl:w-1/2'>
-            <h1 className='text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent'>IEEE VIIT</h1>
-            <h2 className='text-6xl mt-1 font-light'>Student Branch</h2>
+            <h1 className=' text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'>IEEE VIIT</h1>
+            <h2 className=' text-2xl md:text-6xl mt-1 font-light text-nowrap'>Student Branch</h2>
             <div className='flex mt-2'>
-              <p className='font-montserrat px-1 cursor-default text-lg hover:border-b-2 ' onClick={()=>navigate('/about')}>About us</p>
-              <img src='/right-arrow.png' height={25} width={40} className='pl-2 hover:translate-x-1 ease-in duration-100' onClick={()=>navigate('/about')}></img>
+              <p className='font-montserrat px-1 cursor-default md:text-lg hover:border-b-2 ' onClick={()=>navigate('/about')}>About us</p>
+              <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2 hover:translate-x-1 ease-in duration-100' onClick={()=>navigate('/about')}></img>
             </div>
          </div>
          <div className='hidden xl:flex justify-center items-center w-3/4 h-full object-cover'>
             <img src='/electricalTempLogo.jpg' className='w-full h-full block gradient-mask-l-0'></img>
          </div>
         </section>
+
+        <section className='mt-0 min-h-screen w-full md:mt-10'>
+          <h1 className='text-2xl md:text-7xl font-icona mb-'> "Advancing Technology </h1>
+          <div className='ml-2 w-24 bg-blue-500 h-1 md:{ml-7 mt-1 h-2}'></div>
+          <h2 className=' text-2xl translate-x-8 md:translate-x-[330px] mt-1 md:mt-3  md:text-7xl font-icona'> For Humanity"</h2>
+          <div className='text-lg md:text-2xl mt-10 md:mt-24 leading-2 ml-5 w-[52%] md:leading-9 font-montserrat '>
+          <p>At IEEE Student Branch, we harness the potential of technology to create a vibrant community focused on electronics, electrical, and computer engineering.</p>
+          </div>
+          
+        </section>
+
+
     </div>
     {/* <div className='relative'>
       <div className='absolute inset-0 place-self-center content-center'>
