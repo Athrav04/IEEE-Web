@@ -8,20 +8,25 @@ export default {
   theme: {
     extend: {
       keyframes:{
-        animatedUnderline:{
-          '0%':{width:'0px'},
-          '15%':{width:'20px'},
-          '30%':{width:'30px'},
-          '50%': {width:'40px'},
-          '75%' : {width:'60px'},
-          '85%': {width:'75px'},
-          '90%': {width:'90px'},
-          '100%':{width:'96px'},
-
-        }
+        animateUnderline:{
+          '0%':{width:'0%'},
+          '15%':{width:'20%'},
+          '30':{width:'30%'},
+          '50%':{width:'50%'},
+          '75%':{width:'75%'},
+          '100%':{width:'100%'}
+        },
+        reverse:{
+          '0%': { transform: 'scaleX(0)' },
+          '25%': { transform: 'scaleX(0.25)' },
+          '50%': { transform: 'scaleX(0.5)' },
+          '75%': { transform: 'scaleX(0.75)' },
+          '100%': { transform: 'scaleX(1)' }
+        },
       },
-      animations:{
-        animatedUnderline : 'animateUnderline 3s linear '
+      animation:{
+        animatedUnderline : 'animateUnderline 5s linear ',
+        reverse:'reverse 5s linear',
       },
       backgroundSize: {
         'auto':'auto',
@@ -32,9 +37,6 @@ export default {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         icona: ["icona"]
-      },
-      keyframes: {
-        '0%':{'background-position':'('}
       },
     },
   },

@@ -23,17 +23,16 @@ function NavBar(){
 //md:{ w-screen flex items-center justify-center list-none space-x-4 mx-3 text-xs } lg:text-sm xl:text-base flex lg:space-x-6
     return(
         <>
-        <div className="w-full h-5 backdrop-blur-sm">&nbsp;</div>
-            <div className={`w-screen md:w-screen text-white flex justify-between navbar bg-none px-3 pb-2 bg-transparent`}>
+            <div className={`w-screen md:w-screen text-white flex justify-between ${navBg?"backdrop-blur-sm":"bg-transparent"} px-3 pt-4`}>
                 <img className='object-contain h-14 p-2 md:h-20 lg:h-22 lg:pl-4 hover:cursor-pointer' src='public\IEEE_white_logo.webp' alt='ieee-logo' onClick={()=>navigate('/')}/>
-                    <div className={`hidden md:flex justify-center items-center h-12 rounded-xl ${navBg? "backdrop-blur-md":""} border-[#373737] border-[0.5px]`}>
+                    <div className={`hidden md:flex justify-center items-center h-12`}>
                         <NavLink to={'/about'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold ":"navBar-Item main-text-color hover:text-white"}}>About </NavLink>
                         <NavLink to={'/committee'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item main-text-color hover:text-white"}}>Committee </NavLink>
                         <NavLink to={'/events'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item main-text-color hover:text-white"}}>Events </NavLink>
                         <NavLink to={'/achievements'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item main-text-color hover:text-white"}} >Achievements </NavLink>
                     </div>
                 <div className="hidden md:block w-24 mr-3">
-                <button onClick={()=>{console.log("clicked");redirect()}} className=" border-[#0070BB] mt-1 bg-none border-[1px] px-3 py-[6px] rounded-lg hover:bg-[#0070BB] text-lg text-nowrap">Join IEEE</button>
+                <button onClick={()=>{redirect()}} className=" border-[#0070BB] mt-2 bg-none border-[1px] px-3 py-[6px] rounded-lg hover:bg-[#0070BB] text-md text-nowrap">Join IEEE</button>
                 </div> 
                 <div className="flex md:hidden">
                     Right side component

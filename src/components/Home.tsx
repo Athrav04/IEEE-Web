@@ -22,17 +22,16 @@ const Home = (props: { src: string }) => {
             </div>
          </div>
          <div className='hidden xl:flex justify-center items-center w-3/4 h-full object-cover'>
-            <img src='/electricalTempLogo.jpg' className='w-full h-full block gradient-mask-l-0'></img>
+            <img src='/electricalTempLogo.jpg' className=' -z-1 w-full h-full block gradient-mask-l-0'></img>
          </div>
         </section>
 
 
-        <section className='mt-0 min-h-[50vh] md:min-h-[75vh] w-full md:mt-10'>
+        <section className='mt-0 min-h-[50vh] md:min-h-[70vh] w-full md:mt-10'>
 
-          <h1 className='text-2xl md:text-7xl font-icona mb-'> "Advancing Technology </h1>
-          <div className='ml-2 w-24 bg-gradient-to-r from-[#5899E2] via-[#5899E2] to-[#FFFFFF] h-1 md:ml-7 md:mt-1 md:h-2 md:w-72'></div>
-          <h2 className=' text-2xl translate-x-8 md:translate-x-[330px] mt-1 md:mt-2  md:text-7xl font-icona'> For Humanity"</h2>
-          <div className=' w-24 translate-x-[70px] md:translate-x-[457px] bg-gradient-to-r from-[#FFFFFF] via-[#5899E2] to-[#5899E2] h-1 md:mt-1 md:h-2 md:w-[270px]'></div>
+          <h1 className='text-2xl md:text-7xl font-icona text-nowrap'> "Advancing Technology </h1>
+          <div className='ml-2 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-7 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
+          <h2 className=' text-2xl ml-3 md:ml-7 mt-1 md:mt-2  md:text-7xl font-icona'> For Humanity"</h2>
           <div className='text-lg md:text-2xl mt-10 md:mt-24 leading-2 ml-5 w-[52%] md:leading-9 font-montserrat '>
           <p>At IEEE Student Branch, we harness the potential of technology to create a vibrant community focused on electronics, electrical, and computer engineering.</p>
           </div>
@@ -40,8 +39,10 @@ const Home = (props: { src: string }) => {
         </section>
 
 
-        <section className='min-h-screen w-full'>
-          <h1></h1>
+        <section className='min-h-screen flex-col'>
+          <div className='w-full text-7xl flex justify-center items-center font-icona'>
+            <h1 className='mr-3'>Learn.</h1><h1 className='mr-3'>Innovate.</h1><h1 className='mr-3'>Create.</h1>
+          </div>
         </section>
 
 
