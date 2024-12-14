@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Home = (props: { /*src: string,*/ video: string }) => {
-  //const src = props.src;
-  const video = props.video;
+const Home = (props: { src: string }) => {
+  const src = props.src;
   return (
     <>
     <div className='relative'>
@@ -12,8 +11,7 @@ const Home = (props: { /*src: string,*/ video: string }) => {
           <button className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
         </div>
       </div>
-      <video autoPlay loop width="100%" className="videoPlayer" src={video}/>
-      {/* <img src={src} alt='ieee-bg' /> */}
+      <img src={src} alt='ieee-bg' />
     </div>
     <div className='container mt-20 md:mt-28 w-auto text-wrap mx-8 md:mx-12 lg:mx-54 flex justify-center'>
       <p className='text-base md:text-4xl font-black text-sky-500'>Welcome to IEEE Student Branch</p>
@@ -42,28 +40,28 @@ const Home = (props: { /*src: string,*/ video: string }) => {
       From workshops to competitions, we work alongside you to create enriching experiences that align with your academics and professional goals. Discover a community where every initiative reflects your passion for technology.
     </div>
     <div className="container m-12 w-auto md:mt-20 text-xs md:grid md:grid-cols-2 md:gap-4 md:text-sm mx-8 md:mx-28 lg:mx-54">
-      <div className='transition transform motion-reduce:transition-none  motion-reduce:hover:transform-none hover:scale-105'>
+      <div>
       <div className="container mt-4 w-auto h-56 mx-5 rounded-t-md bg-cover bg-center flex justify-center bg-[url('tech-events.jpg')]">
       </div>
       <div className="container mb-4 w-auto m-5 p-4 rounded-b-md shadow-md flex justify-center justify-items-center place-items-center">
         Our Technical Workshops are designed to provide hands-on experience in various areas of electronics and computer technologies. Wheather you're a beginner or an advanced student, our expert will guide you through essential skills and knowledge.
       </div>
       </div>
-      <div className='transition transform motion-reduce:transition-none  motion-reduce:hover:transform-none hover:scale-105'>
+      <div>
       <div className="container mt-4 w-auto h-56 mx-5 rounded-t-md bg-cover bg-center flex justify-center bg-[url('hackthons.jpg')]">
       </div>
       <div className="container mb-4 w-auto m-5 p-4 rounded-b-md shadow-md flex justify-center justify-items-center place-items-center">
         Participate in our Hackathons, where you can collaborate with the fellow students to solve real-world problems. These foster creativity and innovation, allowing you to showcase your skills and learn from other in a competitive yet supportive environment.
       </div>
       </div>
-      <div className='transition transform motion-reduce:transition-none  motion-reduce:hover:transform-none hover:scale-105'>
+      <div>
       <div className="container mt-4 w-auto h-56 mx-5 rounded-t-md bg-cover bg-center flex justify-center bg-[url('network-events.jpg')]">
       </div>
       <div className="container mb-4 w-auto m-5 p-4 rounded-b-md shadow-md flex justify-center justify-items-center place-items-center">
         Engage with our Networking Events, designed to connect students with industry professtionals. Gain insights into latest trends in technology and engineering and build relationship that can help you in future career.
       </div>
       </div>
-      <div className='transition transform motion-reduce:transition-none  motion-reduce:hover:transform-none hover:scale-105'>
+      <div>
       <div className="container mt-4 w-auto h-56 mx-5 rounded-t-md bg-cover bg-center flex justify-center bg-[url('atmosphere.jpg')]">
       </div>
       <div className="container mb-4 w-auto m-5 p-4 text-center rounded-b-md shadow-md flex justify-center justify-items-center place-items-center">

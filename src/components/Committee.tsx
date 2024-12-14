@@ -1,27 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Cards from './Cards'
 import Footer from './Footer'
 import NavBar from './NavBar'
 
-
 const Committee = (props: { src: string}) => {
   const src = props.src;
-
-  
-  const [element, setElement ] = useState(false);
-
-  const changeElement = ()=>{
-      if(true){
-          setElement(true);
-      }else{
-          setElement(false);
-      }
-  }
-
-
-
-  window.addEventListener('hover', changeElement);
-  
   return (
     <div>
       <div>
