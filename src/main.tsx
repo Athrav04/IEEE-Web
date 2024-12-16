@@ -14,7 +14,7 @@ import Acheivements from './components/Acheivements.tsx';
 const router = createBrowserRouter([
   {
     path:'/',
-    element: <App src={'\ieee-bg.mp4'}/>,
+    element: <App src={'\ieee-bg.jpeg'}/>,
     errorElement:<ErrorPage />
   },
   {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/events',
-    element:<Events src='\ieee-bg.jpeg'/>,
+    element:<Events />,
     errorElement:<ErrorPage />
   },
   {

@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Cards from './Cards'
 import Footer from './Footer'
 import NavBar from './NavBar'
 import NavBarMob from './NavBarMob'
 
-
 const Committee = (props: { src: string}) => {
   const src = props.src;
+<<<<<<< HEAD
 
   const [long, setLong] = useState(false);
 
@@ -32,6 +32,8 @@ const Committee = (props: { src: string}) => {
 
   window.addEventListener('hover', changeElement);
   
+=======
+>>>>>>> 06893dcf6d028f098cd0b91bd047b64d0fded338
   return (
     <div>
       <div>
