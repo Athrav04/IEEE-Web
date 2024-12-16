@@ -23,7 +23,7 @@ function NavBar(){
 //md:{ w-screen flex items-center justify-center list-none space-x-4 mx-3 text-xs } lg:text-sm xl:text-base flex lg:space-x-6
     return(
         <>
-            <div className={`w-screen md:w-screen text-white flex justify-between ${navBg?"backdrop-blur-sm":"bg-transparent"} px-3 pt-4`}>
+            <div className={`w-screen md:w-screen z-20 text-white flex justify-between ${navBg?"backdrop-blur-sm":"bg-transparent"} px-3 pt-4`}>
                 <img className='object-contain h-14 p-2 md:h-20 lg:h-22 lg:pl-4 hover:cursor-pointer' src='public\IEEE_white_logo.webp' alt='ieee-logo' onClick={()=>navigate('/')}/>
                     <div className={`hidden md:flex justify-center items-center h-12`}>
                         <NavLink to={'/about'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold ":"navBar-Item main-text-color hover:text-white"}}>About </NavLink>

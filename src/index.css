@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'icona';
-    src: url('/icona-sans-font-family-1734060842-0/IconaSansTRIAL-Black-BF6683702c8f768.otf');
+    src: url('/icona-sans-font-family-1734060842-0/IconaSansTRIAL-Medium-BF6683702d1e08e.otf');
 }
 
 @layer utilities {
@@ -24,10 +24,16 @@
 
 @layer components {
     .main-bg{
-        @apply bg-[#0a0a0a]
+        @apply bg-[#08090a]
     }
-    .main-text-color {
-        @apply text-[#CED4DA]
+    .primary-text{
+        @apply text-[#d0d6e0]
+    }
+    .secondary-text{
+        @apply text-[#8a8f98]
+    }
+    .ternary-text{
+        @apply text-[#8a8f98]
     }
     .navBar-Item {
         @apply px-4 font-light text-lg

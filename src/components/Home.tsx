@@ -1,19 +1,51 @@
 import { useNavigate } from 'react-router-dom';
+import EventsCard from './EventsCard';
+import hackathons from '../../public/hackathons.svg'
+import workshops  from '../../public/workshops.svg'
+import networking from '../../public/networking.svg'
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
+
+type cards = {
+  imageUrl:string,
+  icon : string,
+  name : string,
+  content:string
+}
+
+const eventCards:cards[] = [
+  {
+    imageUrl:'/hackthons.jpg',
+    icon: hackathons,
+    name: 'Hackathons',
+    content: "Showcase your skills and solve real world challenges"
+  },
+  {
+    imageUrl:'/network-events.jpg',
+    icon: workshops,
+    name: 'Workshops',
+    content: "Get your hands dirty and gain valuable skills "
+  },
+  {
+    imageUrl:'/atmosphere.jpg',
+    icon: networking,
+    name: 'Networking',
+    content: "Connect with like minded peers and industry experts"
+  }
+]
  
 const Home = (props: { src: string }) => {
   const navigate = useNavigate()
   const src = props.src;
   return (
     <>
-    <div className='main-bg min-h-screen text-white pl-10 flex-col '>
+    <div className='main-bg min-h-screen text-white flex-col '>
 
         {//================================== Hero Section ===================================
         }
-        <section className='flex justify-start items-center h-screen'>
-         <div className='flex-col justify-start items-center xl:w-1/2'>
+        <section className='flex justify-center items-center w-full h-screen'>
+        <div className='flex-col ml-10 w-1/2 justify-start items-center xl:w-ful'>
             <h1 className=' text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'>IEEE VIIT</h1>
             <h2 className=' text-2xl md:text-6xl mt-1 font-light text-nowrap'>Student Branch</h2>
             <div className='flex mt-2'>
@@ -21,18 +53,18 @@ const Home = (props: { src: string }) => {
               <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2 hover:translate-x-1 ease-in duration-100' onClick={()=>navigate('/about')}></img>
             </div>
          </div>
-         <div className='hidden xl:flex justify-center items-center w-3/4 h-full object-cover'>
-            <img src='/electricalTempLogo.jpg' className=' -z-1 w-full h-full block gradient-mask-l-0'></img>
+         <div className='hidden  md:block w-3/4  h-full opacity-50 object-cover'>
+            <img src='/electricalTempLogo.jpg' className='min-w-full h-full block gradient-mask-l-0'></img>
          </div>
         </section>
 
 
-        <section className='mt-0 min-h-[50vh] md:min-h-[70vh] w-full md:mt-10'>
+        <section className='mt-0 ml-5 min-h-[50vh] md:min-h-[70vh] w-full md:mt-14'>
 
-          <h1 className='text-2xl md:text-7xl font-icona text-nowrap'> "Advancing Technology </h1>
-          <div className='ml-2 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-7 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
-          <h2 className=' text-2xl ml-3 md:ml-7 mt-1 md:mt-2  md:text-7xl font-icona'> For Humanity"</h2>
-          <div className='text-lg md:text-2xl mt-10 md:mt-24 leading-2 ml-5 w-[52%] md:leading-9 font-montserrat '>
+          <h1 className='text-2xl md:text-7xl font-icona text-nowrap font-bold primary-text'> "Advancing Technology </h1>
+          <div className='ml-4 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-9 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
+          <h2 className=' text-2xl ml-3 md:ml-7 mt-1 md:mt-2  md:text-7xl font-icona font-bold primary-text'> For Humanity"</h2>
+          <div className='text-lg md:text-xl mt-10 md:mt-8 leading-2 ml-5 w-[52%] md:leading-7 font-montserrat secondary-text'>
           <p>At IEEE Student Branch, we harness the potential of technology to create a vibrant community focused on electronics, electrical, and computer engineering.</p>
           </div>
           
@@ -40,8 +72,28 @@ const Home = (props: { src: string }) => {
 
 
         <section className='min-h-screen flex-col'>
-          <div className='w-full text-7xl flex justify-center items-center font-icona'>
-            <h1 className='mr-3'>Learn.</h1><h1 className='mr-3'>Innovate.</h1><h1 className='mr-3'>Create.</h1>
+          <div className='text-3xl w-full md:text-7xl flex justify-center items-center font-icona'>
+            <h1 className='mr-3 font-bold primary-text'>Learn.</h1><h1 className='mr-3 font-bold primary-text'>Innovate.</h1><h1 className='mr-3 font-bold primary-text'>Create.</h1>
+          </div>
+          <div className='flex-col mt-12 text-center justify-center items-center'>
+              <p className='font-montserrat  md:text-xl secondary-text'>Join a vibrant community where innovation meets collaboration.</p>
+              <p className='font-montserrat md:text-xl secondary-text text-center justify-center'>
+                Learn, create, and connect with like-minded tech enthusiasts through 
+                  <span className='primary-text font-medium block md:inline-block'> &nbsp;hackathons</span>
+                  <span className='primary-text font-medium block md:inline-block'>&nbsp; workshops &nbsp;</span> 
+                  and exciting 
+                   <span className='primary-text font-medium block md:inline-block'> &nbsp;Projects</span>
+                  </p>
+              {/* <p className='font-montserrat md:text-xl secondary-text flex flex-nowrap text-center justify-center'> Learn, create, and connect with like-minded tech enthusiasts through <p className='primary-text font-medium'> &nbsp;hackathons &nbsp;</p>, <p className='primary-text font-medium'>&nbsp; workshops &nbsp;</p> and exciting <p className='primary-text font-medium'> &nbsp;Projects</p></p> */}
+          </div>
+          <div className='flex flex-col mt-10 justify-center items-center md:flex-row md:justify-evenly md:mt-20'>
+
+            {
+              eventCards.map((card,index)=>{
+                return <EventsCard imageUrl={card.imageUrl} icon={card.icon} type={card.name}content={card.content} key={index}/>
+              })
+            }
+           
           </div>
         </section>
 

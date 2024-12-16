@@ -24,8 +24,12 @@ export default {
           '100%': { transform: 'scaleX(1)' }
         },
       },
+      backgroundImage:{
+          'cardGradient':"linear-gradient(45deg,#2F7FDA,#2575D0,#86B4EA,#FFFFFF,#FFFFFF)",
+          'EventGradient':"linear-gradient(45deg,#08090a,#0a0a0a,#FFFFFF,#FFFFFF)"
+      },
       animation:{
-        animatedUnderline : 'animateUnderline 5s linear ',
+        animatedUnderline : 'animateUnderline 8s linear ',
         reverse:'reverse 5s linear',
       },
       backgroundSize: {
