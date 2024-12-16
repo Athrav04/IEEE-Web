@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Events from "./Events";
 
 function NavBarMob() {
     const [navBg, setNavBg ] = useState(false);
@@ -29,7 +30,7 @@ function NavBarMob() {
     return(
         <>
         <div className={`w-screen text-white flex justify-between navbar ${navBg||view? "bg-black" : "backdrop-blur-sm bg-white/5"}`}>
-        <img className='object-contain h-8 p-2 md:h-14 lg:h-18 lg:p-2' src='public\IEEE_white_logo.webp' alt='ieee-logo' />
+        <img className='object-contain h-8 p-2 md:h-14 lg:h-18 lg:p-2' src='\IEEE_white_logo.webp' alt='ieee-logo' />
         <img className="object-contain h-8 p-2" onClick={open} src="\menu.png" alt="menu" />
         </div>
         <ul className={`list-none text-xs bg-black p-6 ${view? "visible": "collapse"}`}>
@@ -42,8 +43,8 @@ function NavBarMob() {
             <li className="hover:underline decoration-sky-500 py-2 underline-offset-8">
                 <NavLink className={(e)=>{return e.isActive? "text-sky-500":"text-white"}} to="/committee">Committee</NavLink>
             </li>
-            <li className="hover:underline decoration-sky-500 py-2 underline-offset-8">
-                <NavLink className={(e)=>{return e.isActive? "text-sky-500":"text-white"}} to="/events">Events</NavLink>
+            <li className={`hover:underline decoration-sky-500 py-2 underline-offset-8 text-white`}>
+                <Events src="/ieee-bg.jpeg"/>
             </li>
             <li className="hover:underline decoration-sky-500 py-2 underline-offset-8">
                 <NavLink className={(e)=>{return e.isActive? "text-sky-500":"text-white"}} to="/acheivements">Acheivements</NavLink>

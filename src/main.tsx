@@ -8,8 +8,7 @@ import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 // import Committee from './components/Committee.tsx';
 // import UserPage from './components/UserPage.tsx';
 // import About from './components/About.tsx';
-import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
-import Acheivements from './components/Acheivements.tsx';
+import { ErrorPage, About, Committee, UserPage, Login, Acheivements } from './components/config.ts';
 
 const router = createBrowserRouter([
   {
@@ -35,11 +34,6 @@ const router = createBrowserRouter([
   {
     path:'/Login',
     element:<Login />,
-    errorElement:<ErrorPage />
-  },
-  {
-    path:'/events',
-    element:<Events />,
     errorElement:<ErrorPage />
   },
   {
