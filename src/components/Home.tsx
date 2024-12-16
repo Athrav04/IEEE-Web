@@ -81,7 +81,7 @@ const Home = (props: { /*src: string,*/ video: string }) => {
       <div className='container my-4 h-10 p-5 md:h-14 rounded-lg shadow-md hover:shadow-lg flex items-center'>4</div>
       <div className='container my-4 h-10 p-5 md:h-14 rounded-lg shadow-md hover:shadow-lg flex items-center'>5</div>
       <div className='container text-center my-4 h-10 md:h-14 rounded-lg shadow-md hover:shadow-lg flex justify-center items-center'>
-        <a href='google.com'>Show More</a>
+        <a href='/acheivements'>Show More</a>
       </div>
     </div>
     <div className='container mt-20 md:mt-28 w-auto text-wrap mx-8 md:mx-12 lg:mx-54 flex justify-center'>

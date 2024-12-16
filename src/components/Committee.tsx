@@ -2,12 +2,24 @@ import React, { useState } from 'react'
 import Cards from './Cards'
 import Footer from './Footer'
 import NavBar from './NavBar'
+import NavBarMob from './NavBarMob'
 
 
 const Committee = (props: { src: string}) => {
   const src = props.src;
 
-  
+  const [long, setLong] = useState(false);
+
+  const changeNavBar = () => {
+    if(window.innerWidth >= 768){
+      setLong(true);
+    }else{
+      setLong(false);
+    }
+  };
+
+  window.addEventListener('navigate', changeNavBar);
+
   const [element, setElement ] = useState(false);
 
   const changeElement = ()=>{
@@ -18,8 +30,6 @@ const Committee = (props: { src: string}) => {
       }
   }
 
-
-
   window.addEventListener('hover', changeElement);
   
   return (
@@ -27,7 +37,7 @@ const Committee = (props: { src: string}) => {
       <div>
       <div className='relative'>
         <div className='fixed top-0 z-10'>
-          <NavBar/>
+        {(long)? <NavBar/> : <NavBarMob/> }
         </div>
         <div className='relative bg-sky-200'>
           <div className='absolute inset-0 place-self-center content-center'>
