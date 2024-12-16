@@ -9,6 +9,7 @@ import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 // import UserPage from './components/UserPage.tsx';
 // import About from './components/About.tsx';
 import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
+import Acheivements from './components/Acheivements.tsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
   {
     path:'/events',
     element:<Events />,
+    errorElement:<ErrorPage />
+  },
+  {
+    path:'/acheivements',
+    element:<Acheivements />,
     errorElement:<ErrorPage />
   }
 ])
