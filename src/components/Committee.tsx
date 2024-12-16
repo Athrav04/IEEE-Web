@@ -6,40 +6,12 @@ import NavBarMob from './NavBarMob'
 
 const Committee = (props: { src: string}) => {
   const src = props.src;
-<<<<<<< HEAD
-
-  const [long, setLong] = useState(false);
-
-  const changeNavBar = () => {
-    if(window.innerWidth >= 768){
-      setLong(true);
-    }else{
-      setLong(false);
-    }
-  };
-
-  window.addEventListener('navigate', changeNavBar);
-
-  const [element, setElement ] = useState(false);
-
-  const changeElement = ()=>{
-      if(true){
-          setElement(true);
-      }else{
-          setElement(false);
-      }
-  }
-
-  window.addEventListener('hover', changeElement);
-  
-=======
->>>>>>> 06893dcf6d028f098cd0b91bd047b64d0fded338
   return (
     <div>
       <div>
       <div className='relative'>
         <div className='fixed top-0 z-10'>
-        {(long)? <NavBar/> : <NavBarMob/> }
+          <NavBar/>
         </div>
         <div className='relative bg-sky-200'>
           <div className='absolute inset-0 place-self-center content-center'>
