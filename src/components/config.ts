@@ -6,6 +6,7 @@ import Login from './Login'
 import UserPage from './UserPage'
 import UserForm from './UserForm'
 import Events from './Events'
+import Acheivements from './Acheivements'
 
 
 
@@ -17,5 +18,6 @@ export {
     Login,
     UserPage,
     UserForm,
-    Events
+    Events,
+    Acheivements
 }
