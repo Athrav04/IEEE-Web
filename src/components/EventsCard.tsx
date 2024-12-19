@@ -27,7 +27,7 @@ const EventsCard = ({imageUrl,type,icon,content}:EventCardProps) => {
 
          
           
-          <a className=' pl-3 lg:pl-6 mt-4 lg:mt-9 inline-block text-xs lg:text-sm primary-text font-thin hover:underline hover:cursor-pointer'>Learn More</a>
+          <a className=' pl-3 lg:pl-6 mt-4 lg:mt-9 inline-block text-xs lg:text-sm primary-text font-thin hover:underline hover:cursor-pointer'>Learn More &rarr;</a>
             
         </section>
     </>

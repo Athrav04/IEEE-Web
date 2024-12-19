@@ -1,11 +1,22 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import EventsCard from './EventsCard';
 import hackathons from '../../public/hackathons.svg'
 import workshops  from '../../public/workshops.svg'
 import networking from '../../public/networking.svg'
+import techEvents from '../../public/tech-events.jpg'
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
+
+type eventInfo = {
+  name:string,
+  day:string,
+  date:string,
+  time:string,
+  venue:string,
+  description:string
+}
 
 type cards = {
   imageUrl:string,
@@ -36,6 +47,7 @@ const eventCards:cards[] = [
 ]
  
 const Home = (props: { src: string }) => {
+  const eventData = useState<eventInfo>();
   const navigate = useNavigate()
   const src = props.src;
   return (
@@ -59,7 +71,7 @@ const Home = (props: { src: string }) => {
         </section>
 
 
-        <section className='mt-0 ml-5 min-h-[50vh] md:min-h-[70vh] w-full md:mt-14'>
+        <section className='mt-0 ml-5 min-h-[50vh] md:min-h-[60vh] w-full md:mt-14'>
 
           <h1 className='text-2xl md:text-7xl font-icona text-nowrap font-bold primary-text'> "Advancing Technology </h1>
           <div className='ml-4 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-9 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
@@ -96,6 +108,47 @@ const Home = (props: { src: string }) => {
            
           </div>
         </section>
+
+
+        <section className='mt-20 h-screen w-full'>
+            <div className='flex justify-end items-end mr-10 font-icona'>
+            <h2 className='text-7xl font-nabla animate-animateText'>Mark</h2>
+              <h1 className='text-7xl font-bold primary-text'>&nbsp; your Calendars</h1>
+            </div>
+
+
+            <div className='flex justify-between items-center mt-40 ml-32'>
+              {/*All Static vlaues later to be added from state variable after fetching from backend (cache) */}
+
+              {/*Left Side div */}
+              <div className='flex'>
+
+                <div className="flex-col">
+                <h1 className='text-5xl font-poppins font-medium eventDateText'>Thursday</h1>
+                  <span className='flex flex-col items-start mt-12'>
+                    <h2 className='text-[170px] font-poppins font-bold eventDateText leading-none '>25</h2>
+                    <h2 className='text-7xl font-medium font-poppins eventDateText leading-none -mt-5'>OCTOBER</h2>
+                  </span>
+                </div>
+
+                <span className='bg-[#f1fffa] w-[0.1px] mx-10' />
+
+                <div className='flex flex-col justify-center items-center '>
+                    <h1 className='text-5xl eventDateText font-poppins font-medium'>08:00 AM</h1>
+                    <h1 className='text-5xl eventDateText font-poppins font-medium mt-2'>C001</h1>
+                </div>
+
+              </div>
+
+              {/*Right side div */}
+              <div className='flex flex-col items-start justify-start mx-20'>
+                <img src={techEvents} className='h-96'></img>
+                <div className='mt-5'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. A ut sapiente quod facilis libero voluptate animi, totam voluptates nulla ea odit reprehenderit quia dicta, tenetur doloremque repudiandae ipsum. Similique, ipsa.</div>
+              </div>
+            </div>
+            
+        </section>
+
 
 
     </div>

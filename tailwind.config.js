@@ -23,14 +23,20 @@ export default {
           '75%': { transform: 'scaleX(0.75)' },
           '100%': { transform: 'scaleX(1)' }
         },
+        animateText:{
+          '0%':{transform:'translateY(2px)'},
+          '50%':{transform:'translateY(-5px)'},
+          '100%':{transform:'translateY(2px)'}
+        }
       },
       backgroundImage:{
           'cardGradient':"linear-gradient(45deg,#2F7FDA,#2575D0,#86B4EA,#FFFFFF,#FFFFFF)",
-          'EventGradient':"linear-gradient(45deg,#08090a,#0a0a0a,#FFFFFF,#FFFFFF)"
+          'EventGradient':"linear-gradient(45deg,#08090a,#0a0a0a,#FFFFFF,#FFFFFF)",
       },
       animation:{
         animatedUnderline : 'animateUnderline 8s linear ',
         reverse:'reverse 5s linear',
+        animateText:'animateText 2s ease-in-out infinite'
       },
       backgroundSize: {
         'auto':'auto',
@@ -40,7 +46,10 @@ export default {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-        icona: ["icona"]
+        icona: ["icona"],
+        nabla: ["Nabla"],
+        roboto: ["Roboto"],
+        poppins: ["Poppins"]
       },
     },
   },
