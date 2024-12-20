@@ -1,8 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import NavBar from "./components/NavBar";
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 import './App.css';
 import NavBarMob from './components/NavBarMob';
@@ -25,7 +22,7 @@ function App(props: { src: string }) {
   return(
   <>
   <div>
-      <div className='relative'>
+      <div className='relative overflow-x-hidden'>
         <div className='fixed top-0 z-10'>
           {(long)? <NavBar/> : <NavBarMob/> }
         </div>

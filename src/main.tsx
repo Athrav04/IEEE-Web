@@ -3,12 +3,8 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import {createBrowserRouter , RouterProvider} from 'react-router-dom';
-// import ErrorPage from './components/ErrorPage.tsx';
-// import Home from './components/Home.tsx';
-// import Committee from './components/Committee.tsx';
-// import UserPage from './components/UserPage.tsx';
-// import About from './components/About.tsx';
-import { ErrorPage, About, Committee, UserPage, Login, Acheivements } from './components/config.ts';
+import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
+import Dashboard from './pages/Dashboard.tsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +36,11 @@ const router = createBrowserRouter([
     path:'/acheivements',
     element:<Acheivements />,
     errorElement:<ErrorPage />
+  },
+  {
+    path:'/AdminDashboard',
+    element:<Dashboard/>,
+    errorElement:<ErrorPage/>
   }
 ])
 

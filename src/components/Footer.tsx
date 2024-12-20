@@ -1,10 +1,10 @@
 const Footer = ()=>{
     return(
         <>
-        <footer className="grid grid-cols-3 place-items-center bg-slate-200 text-slate-500">
+        <footer className="grid grid-cols-3 place-items-center bg-[#0A0A0A] border-t-[0.5px] border-[#373737] text-white font-thin">
             <div className="m-5">
                 <ul>
-                    <p className="font-semibold">Quick Links</p>
+                    <p className="font-normal">Quick Links</p>
                     <div className="my-3">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
