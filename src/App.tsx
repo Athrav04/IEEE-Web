@@ -3,20 +3,10 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import './App.css';
 import NavBarMob from './components/NavBarMob';
+import { useState } from "react";
 
 function App(props: { src: string }) {
 
-  const [long, setLong] = useState(false);
-
-  const changeNavBar = () => {
-    if(window.innerWidth >= 768){
-      setLong(true);
-    }else{
-      setLong(false);
-    }
-  };
-
-  window.addEventListener('navigate' , changeNavBar);
 
   const src = props.src;
   return(
@@ -24,7 +14,7 @@ function App(props: { src: string }) {
   <div>
       <div className='relative overflow-x-hidden'>
         <div className='fixed top-0 z-10'>
-          {(long)? <NavBar/> : <NavBarMob/> }
+          <NavBar></NavBar>
         </div>
         <Home src={src}/>
       </div>

@@ -34,7 +34,6 @@ const router = createBrowserRouter([
   },
   {
     path:'/acheivements',
-    element:<Acheivements />,
     errorElement:<ErrorPage />
   },
   {
