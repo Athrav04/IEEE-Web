@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import EventsCard from './EventsCard';
+import EventsCard from '../components/EventsCard';
 import hackathons from '../../public/hackathons.svg'
 import workshops  from '../../public/workshops.svg'
 import networking from '../../public/networking.svg'
@@ -131,10 +131,10 @@ const Home = (props: { src: string }) => {
                   </span>
                 </div>
 
-                <span className='bg-[#f1fffa] w-[0.1px] mx-10' />
+                <span className='bg-[#f1fffa] w-[0.5px] mx-10' />
 
-                <div className='flex flex-col justify-center items-center '>
-                    <h1 className='text-5xl eventDateText font-poppins font-medium'>08:00 AM</h1>
+                <div className='flex flex-col flex-nowrap justify-center items-center '>
+                    <h1 className='text-5xl eventDateText font-poppins font-medium text-nowrap'>08:00 AM</h1>
                     <h1 className='text-5xl eventDateText font-poppins font-medium mt-2'>C001</h1>
                 </div>
 
@@ -142,8 +142,6 @@ const Home = (props: { src: string }) => {
 
               {/*Right side div */}
               <div className='flex flex-col items-start justify-start mx-20'>
-                <img src={techEvents} className='h-96'></img>
-                <div className='mt-5'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. A ut sapiente quod facilis libero voluptate animi, totam voluptates nulla ea odit reprehenderit quia dicta, tenetur doloremque repudiandae ipsum. Similique, ipsa.</div>
               </div>
             </div>
             
