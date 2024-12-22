@@ -1,10 +1,23 @@
-import { StrictMode } from 'react'
+import { StrictMode , PropsWithChildren } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
 import Dashboard from './pages/Dashboard.tsx';
+import { ReactLenis, useLenis } from 'lenis/react'
+
+function Lenis({children}:PropsWithChildren) {
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+
+  return (
+    <ReactLenis root>
+      {children}
+    </ReactLenis>
+  )
+}
 
 const router = createBrowserRouter([
   {
@@ -45,6 +58,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <Lenis>
     <RouterProvider fallbackElement={<ErrorPage/>} router={router}/>
+    </Lenis>
   </StrictMode>,
 )

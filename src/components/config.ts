@@ -7,6 +7,7 @@ import UserPage from './UserPage'
 import UserForm from './UserForm'
 import Events from './Events'
 import Acheivements from './Acheivements'
+import LeftSidebar from './LeftSidebar/LeftSidebar'
 
 
 
@@ -19,5 +20,6 @@ export {
     UserPage,
     UserForm,
     Events,
-    Acheivements
+    Acheivements,
+    LeftSidebar
 }

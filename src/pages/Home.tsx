@@ -5,6 +5,7 @@ import hackathons from '../../public/hackathons.svg'
 import workshops  from '../../public/workshops.svg'
 import networking from '../../public/networking.svg'
 import techEvents from '../../public/tech-events.jpg'
+import { GoDot, GoDotFill } from 'react-icons/go';
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
@@ -71,7 +72,7 @@ const Home = (props: { src: string }) => {
         </section>
 
 
-        <section className='mt-0 ml-5 min-h-[50vh] md:min-h-[60vh] w-full md:mt-14'>
+        <section className='mt-0 pl-5 min-h-[50vh] md:min-h-[60vh] w-full md:pt-14 bg-gradient-to-t from-[#08090a] to-[#141516]'>
 
           <h1 className='text-2xl md:text-7xl font-icona text-nowrap font-bold primary-text'> "Advancing Technology </h1>
           <div className='ml-4 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-9 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
@@ -83,7 +84,7 @@ const Home = (props: { src: string }) => {
         </section>
 
 
-        <section className='min-h-screen flex-col'>
+        <section className='min-h-screen flex-col bg-gradient-to-t from-[#08090a] via-[#141516] to-[#08090a]'>
           <div className='text-2xl w-full md:text-7xl flex justify-center items-center font-icona'>
             <h1 className='mr-3 font-bold primary-text'>Learn.</h1><h1 className='mr-3 font-bold primary-text'>Innovate.</h1><h1 className='mr-3 font-bold primary-text'>Create.</h1>
           </div>
@@ -111,9 +112,8 @@ const Home = (props: { src: string }) => {
 
 
         <section className='mt-20 h-screen w-full'>
-            <div className='flex justify-end items-end mr-10 font-icona'>
-            <h2 className='text-7xl font-nabla animate-animateText'>Mark</h2>
-              <h1 className='text-7xl font-bold primary-text'>&nbsp; your Calendars</h1>
+            <div className='flex justify-start items-start ml-10 font-icona'>
+              <h1 className='text-7xl primary-text'>EVENT NAME</h1>
             </div>
 
 
@@ -141,7 +141,14 @@ const Home = (props: { src: string }) => {
               </div>
 
               {/*Right side div */}
-              <div className='flex flex-col items-start justify-start mx-20'>
+              <div className='flex flex-col justify-center items-center mx-20 w-full h-full'>
+                  <div className='flex text-xl items-center font-oswald primary-text'>
+                  <GoDotFill/><span className='ml-1 mr-5'>ROBOTICS</span>  <GoDotFill/><span className='ml-1 mr-5'>ARDUINO</span>  <GoDotFill/><span className='ml-1 mr-5'>IMAGE SENSORS</span>
+                  </div>
+                  <div>
+                    <p className='mt-5 font-oswald ternary-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum tempore placeat asperiores. Sunt, perspiciatis, doloremque explicabo optio reiciendis laudantium esse doloribus harum soluta amet natus excepturi, modi laborum rem cumque.
+                    Nulla molestiae soluta voluptas quasi eveniet nihil minus, quos doloribus harum porro perferendis unde assumenda dolor natus hic doloremque rem eius nisi? Distinctio cupiditate quo libero dignissimos neque ut et!</p>
+                  </div>
               </div>
             </div>
             

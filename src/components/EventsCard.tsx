@@ -9,7 +9,7 @@ interface EventCardProps {
 const EventsCard = ({imageUrl,type,icon,content}:EventCardProps) => {
   return (
     <>
-        <section className='h-[390px] w-60 mb-5 lg:min-h-[410px] lg:w-72 xl:h-[500px] xl:w-96 rounded-3xl bg-[#141516] transition ease-in duration-150 hover:scale-110'>
+        <section className='h-[390px] w-60 mb-5 lg:min-h-[410px] lg:w-72 xl:h-[500px] xl:w-96 rounded-3xl bg-[#141516] transition ease-in duration-150 hover:scale-105'>
           <div className='h-2/3 rounded-3xl'>
             <img src={imageUrl} alt='events' className='h-full w-full object-cover rounded-t-3xl gradient-mask-b-0'></img>
           </div>

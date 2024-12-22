@@ -47,9 +47,9 @@ export default {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         icona: ["icona"],
-        nabla: ["Nabla"],
         roboto: ["Roboto"],
-        poppins: ["Poppins"]
+        poppins: ["Poppins"],
+        oswald: ["Oswald"],
       },
     },
   },
