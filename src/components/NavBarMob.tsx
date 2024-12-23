@@ -1,9 +1,17 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Events from "./Events";
+import React from "react";
 
 function NavBarMob() {
     const [navBg, setNavBg ] = useState(false);
+
+    
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = `join`; 
+        navigate(path);
+    }
 
     const changeToTransparent = ()=>{
         if(window.scrollY >= 14){
@@ -55,7 +63,7 @@ function NavBarMob() {
             <li className="hover:underline decoration-sky-500 py-2 underline-offset-8">
                 <NavLink className={(e)=>{return e.isActive? "text-sky-500":"text-white"}} to="/contact">CONTACT</NavLink>
             </li>
-            <button className='bg-gradient-to-r from-sky-300 to-sky-500 text-white my-2 text-sm w-24 h-6 rounded-full'>Join IEEE</button>
+            <button onClick={()=>{return routeChange()}} className='bg-gradient-to-r from-sky-300 to-sky-500 text-white my-2 text-sm w-24 h-6 rounded-full'>Join IEEE</button>
         </ul>
         </>
     )
