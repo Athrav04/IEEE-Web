@@ -20,7 +20,6 @@ function NavBar(){
 
 
     window.addEventListener('scroll', changeToTransparent);
-//md:{ w-screen flex items-center justify-center list-none space-x-4 mx-3 text-xs } lg:text-sm xl:text-base flex lg:space-x-6
     return(
         <>
             <div className={`w-screen md:w-screen z-20 text-white flex justify-between ${navBg?"backdrop-blur-sm":"bg-transparent"} px-3 pt-4`}>

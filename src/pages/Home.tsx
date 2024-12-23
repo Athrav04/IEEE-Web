@@ -6,6 +6,7 @@ import workshops  from '../../public/workshops.svg'
 import networking from '../../public/networking.svg'
 import techEvents from '../../public/tech-events.jpg'
 import { GoDot, GoDotFill } from 'react-icons/go';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
@@ -113,11 +114,11 @@ const Home = (props: { src: string }) => {
 
         <section className='mt-20 h-screen w-full'>
             <div className='flex justify-start items-start ml-10 font-icona'>
-              <h1 className='text-7xl primary-text'>EVENT NAME</h1>
+              <h1 className='text-7xl primary-text ml-10'>EVENT NAME</h1>
             </div>
 
 
-            <div className='flex justify-between items-center mt-40 ml-32'>
+            <div className='flex justify-between items-center mt-32 ml-32'>
               {/*All Static vlaues later to be added from state variable after fetching from backend (cache) */}
 
               {/*Left Side div */}
@@ -145,13 +146,29 @@ const Home = (props: { src: string }) => {
                   <div className='flex text-xl items-center font-oswald primary-text'>
                   <GoDotFill/><span className='ml-1 mr-5'>ROBOTICS</span>  <GoDotFill/><span className='ml-1 mr-5'>ARDUINO</span>  <GoDotFill/><span className='ml-1 mr-5'>IMAGE SENSORS</span>
                   </div>
-                  <div>
+
+                  <div className='text-left'>
                     <p className='mt-5 font-oswald ternary-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum tempore placeat asperiores. Sunt, perspiciatis, doloremque explicabo optio reiciendis laudantium esse doloribus harum soluta amet natus excepturi, modi laborum rem cumque.
-                    Nulla molestiae soluta voluptas quasi eveniet nihil minus, quos doloribus harum porro perferendis unde assumenda dolor natus hic doloremque rem eius nisi? Distinctio cupiditate quo libero dignissimos neque ut et!</p>
+                    Nulla molestiae soluta voluptas quasi eveniet nihil minus, quos doloribus harum porro perferendis unde assumenda dolor natus hic doloremque rem eius nisi? Distinctio cupiditate quo libero dignissimos neque ut et!
+                    </p>
+                    <div className='flex gap-6 mt-5 font-roboto text-lg'>
+                      <button className=' text-center bg-[#E6E6E6] hover:bg-white rounded-lg text-black px-5 leading-8'>Register Now</button> 
+                      <button className='text-center flex items-center bg-gradient-to-tr from-[#FFFFFF] to-[#141516] bg-clip-text text-transparent'>Set Reminder <MdKeyboardArrowRight className='text-xl ml-2 text-white'/></button>
+                    </div>
                   </div>
+                   
               </div>
             </div>
             
+        </section>
+
+
+        <section className='h-screen w-full bg-gradient-to-b flex justify-between px-10 from-[#08090a] to-[#141416]'>
+          <div>
+          <h1 className='text-6xl primary-text font-montserrat'>This Week's Highlight</h1>
+              <p className='secondary-text text-xl font-roboto mt-5 w-2/3 '>Checkout this week's articles from Students and <span className='secondary-text text-xl font-roboto inline-block text-white underline hover:cursor-pointer'>IEEE Members</span> and gain insightful knowledge on topics ranging from electronics to Tech.</p>
+          </div>
+              
         </section>
 
 

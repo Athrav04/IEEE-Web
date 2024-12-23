@@ -15,10 +15,9 @@
 
 @layer utilities {
 .gradient-text-2 {
-    background-image: linear-gradient(to top right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);
-    background-size: 200%;
+    background-image: linear-gradient(to right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);
+    background-size: 300% 300%;
     background-clip: text;
-    text-decoration: transparent;
 }
 }
 
@@ -27,10 +26,10 @@
         @apply bg-[#08090a]
     }
     .primary-text{
-        @apply text-[#d0d6e0]
+        @apply text-[#f7f8f8]
     }
     .secondary-text{
-        @apply text-[#8a8f98]
+        @apply text-[#A4A4A5]
     }
     .ternary-text{
         @apply text-[#8a8f98]

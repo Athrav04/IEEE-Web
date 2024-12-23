@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Events from "./Events";
+import Events from "../pages/Events";
 
 function NavBarMob() {
     const [navBg, setNavBg ] = useState(false);
