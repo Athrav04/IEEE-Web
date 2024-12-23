@@ -9,6 +9,7 @@ import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 // import UserPage from './components/UserPage.tsx';
 // import About from './components/About.tsx';
 import { ErrorPage, About, Committee, UserPage, Login, Acheivements } from './components/config.ts';
+import PdfViewer from './components/PdfViewer.tsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
     path:'/acheivements',
     element:<Acheivements />,
     errorElement:<ErrorPage />
+  },
+  {
+    path:'/join',
+    element:<PdfViewer pdf='\IEEE Membership Step by Step Representation.pdf'/>,
+    errorElement:<ErrorPage/>
   }
 ])
 

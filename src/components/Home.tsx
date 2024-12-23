@@ -1,14 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = (props: { src: string }) => {
   const src = props.src;
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `join`; 
+    navigate(path);
+  }
   return (
     <>
     <div className='relative'>
       <div className='absolute inset-0 place-self-center content-center'>
         <p className='font-montserrat font-black text-center text-white text-base md:text-5xl lg:text-6xl'>IEEE VIIT Student Branch</p>
         <div className='bg-sky-500'>
-          <button className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
+          <button onClick={()=>{return window.scrollTo({top:4000, left:0, behavior:"smooth"})}} className='absolute inset-0 top-16 md:top-32 place-self-center content-center bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-36 w-32 md:h-9 h-6 rounded-full '>GET STARTED</button>
         </div>
       </div>
       <img src={src} alt='ieee-bg' />
@@ -99,7 +105,7 @@ const Home = (props: { src: string }) => {
         <p className='text-xs text-slate-400 mt-5 mx-8 md:mx-28 xl:mx-52'>At the IEEE Student Branch, we believe in nurturing the next generation of engineering leaders. Through our diverse initiatives, we provide our members with hands-on learning opportunities, industry exposure, and the chance to make a tangible difference in their communities.</p>
       </div>
       <div className='flex justify-center'>
-        <button className='m-6 top-16 md:top-40 bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-40 w-36 md:h-9 h-10 rounded-md'>Join Membership!!!</button>
+        <button onClick={()=>{return routeChange()}} className='m-6 top-16 md:top-40 bg-gradient-to-r from-sky-300 to-sky-500 text-white text-xs md:text-sm md:w-40 w-36 md:h-9 h-10 rounded-md'>Join Membership!!!</button>
       </div>
     </div>
     </>
