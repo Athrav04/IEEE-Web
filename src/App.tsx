@@ -1,31 +1,24 @@
+<<<<<<< HEAD
 import { useState } from 'react'
+=======
+>>>>>>> 7fa6ab47f14f5c655b7a1e8ed1b4539b32e6c2a7
 import NavBar from "./components/NavBar";
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 import './App.css';
 import NavBarMob from './components/NavBarMob';
+import { useState } from "react";
 
 function App(props: { src: string }) {
 
-  const [long, setLong] = useState(false);
-
-  const changeNavBar = () => {
-    if(window.innerWidth >= 768){
-      setLong(true);
-    }else{
-      setLong(false);
-    }
-  };
-
-  window.addEventListener('navigate' , changeNavBar);
 
   const src = props.src;
   return(
   <>
   <div>
-      <div className='relative'>
+      <div className='relative overflow-x-hidden'>
         <div className='fixed top-0 z-10'>
-          {(long)? <NavBar/> : <NavBarMob/> }
+          <NavBar></NavBar>
         </div>
         <Home src={src}/>
       </div>

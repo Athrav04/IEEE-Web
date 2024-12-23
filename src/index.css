@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.animate-Underline {
+    animation: animationUnderline;
+}
+
+@font-face {
+    font-family: 'icona';
+    src: url('/icona-sans-font-family-1734060842-0/IconaSansTRIAL-Medium-BF6683702d1e08e.otf');
+}
+
+@layer utilities {
+.gradient-text-2 {
+    background-image: linear-gradient(to top right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);
+    background-size: 200%;
+    background-clip: text;
+    text-decoration: transparent;
+}
+}
+
+@layer components {
+    .main-bg{
+        @apply bg-[#08090a]
+    }
+    .primary-text{
+        @apply text-[#d0d6e0]
+    }
+    .secondary-text{
+        @apply text-[#8a8f98]
+    }
+    .ternary-text{
+        @apply text-[#8a8f98]
+    }
+    .navBar-Item {
+        @apply px-4 font-light text-lg text-[#dee2e6]
+    }
+    .eventDateText {
+        @apply text-[#d5c7bc] 
+    }
+    
+}
+
