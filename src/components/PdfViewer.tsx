@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function PdfViewer(props: { pdf: string }) {
 
     const pdf = props.pdf;

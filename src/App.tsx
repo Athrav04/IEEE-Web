@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-=======
->>>>>>> 7fa6ab47f14f5c655b7a1e8ed1b4539b32e6c2a7
 import NavBar from "./components/NavBar";
 import Home from './pages/Home';
 import Footer from './components/Footer';
