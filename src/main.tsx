@@ -59,6 +59,11 @@ const router = createBrowserRouter([
     path:'/AdminDashboard',
     element:<Dashboard/>,
     errorElement:<ErrorPage/>
+  },
+  {
+    path:'/events',
+    element:<Events />,
+    errorElement:<ErrorPage/>
   }
 ])
 

@@ -13,6 +13,23 @@
     src: url('/icona-sans-font-family-1734060842-0/IconaSansTRIAL-Medium-BF6683702d1e08e.otf');
 }
 
+@font-face {
+    font-family: 'barber1';
+    src: url('/Barber-Fill.otf');
+}
+@font-face {
+    font-family: 'barber2';
+    src: url('/Barber-Outline.otf');
+}
+@font-face {
+    font-family: 'barber3';
+    src: url('/Barber-Right.otf');
+}
+@font-face {
+    font-family: 'barber4';
+    src: url('/Barber-Shadow.otf');
+}
+
 @layer utilities {
 .gradient-text-2 {
     background-image: linear-gradient(to right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);

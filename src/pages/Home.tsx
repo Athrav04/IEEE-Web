@@ -62,9 +62,9 @@ const Home = (props: { src: string }) => {
         <div className='flex-col ml-2 md:ml-10 md:w-1/2 justify-center md:justify-start items-center xl:w-ful'>
             <h1 className=' text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'>IEEE VIIT</h1>
             <h2 className=' text-2xl md:text-6xl mt-1 font-light text-nowrap'>Student Branch</h2>
-            <div className='flex mt-2'>
-              <p className='font-montserrat px-1 cursor-default md:text-lg hover:border-b-2 ' onClick={()=>navigate('/about')}>About us</p>
-              <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2 hover:translate-x-1 ease-in duration-100' onClick={()=>navigate('/about')}></img>
+            <div className='flex mt-2 group'>
+              <p className='font-montserrat px-1 cursor-default md:text-lg group-hover:border-b-2 text-center' onClick={()=>navigate('/about')}>About us</p>
+              <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2  ease-in duration-100 group-hover:translate-x-1' onClick={()=>navigate('/about')}></img>
             </div>
          </div>
          <div className='hidden  md:block w-3/4  h-full opacity-50 object-cover'>
@@ -125,7 +125,7 @@ const Home = (props: { src: string }) => {
               <div className='flex'>
 
                 <div className="flex-col">
-                <h1 className='text-5xl font-poppins font-medium eventDateText'>Thursday</h1>
+                <h1 className='text-5xl  font-medium font-poppins eventDateText'>Thursday</h1>
                   <span className='flex flex-col items-start mt-12'>
                     <h2 className='text-[170px] font-poppins font-bold eventDateText leading-none '>25</h2>
                     <h2 className='text-7xl font-medium font-poppins eventDateText leading-none -mt-5'>OCTOBER</h2>
@@ -151,9 +151,9 @@ const Home = (props: { src: string }) => {
                     <p className='mt-5 font-oswald ternary-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum tempore placeat asperiores. Sunt, perspiciatis, doloremque explicabo optio reiciendis laudantium esse doloribus harum soluta amet natus excepturi, modi laborum rem cumque.
                     Nulla molestiae soluta voluptas quasi eveniet nihil minus, quos doloribus harum porro perferendis unde assumenda dolor natus hic doloremque rem eius nisi? Distinctio cupiditate quo libero dignissimos neque ut et!
                     </p>
-                    <div className='flex gap-6 mt-5 font-roboto text-lg'>
+                    <div className='flex gap-6 mt-5 font-roboto text-lg '>
                       <button className=' text-center bg-[#E6E6E6] hover:bg-white rounded-lg text-black px-5 leading-8'>Register Now</button> 
-                      <button className='text-center flex items-center bg-gradient-to-tr from-[#FFFFFF] to-[#141516] bg-clip-text text-transparent'>Set Reminder <MdKeyboardArrowRight className='text-xl ml-2 text-white'/></button>
+                      <button className='text-center flex items-center bg-gradient-to-tr from-[#FFFFFF] to-[#141516] bg-clip-text text-transparent group'>Set Reminder <MdKeyboardArrowRight className='text-xl ml-2 text-white group-hover:translate-x-1 transition ease-in duration-200'/></button>
                     </div>
                   </div>
                    

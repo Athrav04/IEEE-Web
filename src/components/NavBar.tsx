@@ -3,13 +3,7 @@ import { NavLink, Navigate , redirect, useNavigate} from "react-router-dom";
 
 function NavBar(){
     const [navBg, setNavBg ] = useState(false);
-    
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-        let path = `join`; 
-        navigate(path);
-    }
-
+    let navigate = useNavigate();
     const changeToTransparent = ()=>{
         if(window.scrollY >= 14){
             setNavBg(true);
@@ -19,7 +13,7 @@ function NavBar(){
     }
 
     const redirect = ()=>{
-        window.open("https://www.ieee.org/membership/join/index.html",'_blank')
+        window.open(`${window.location.origin}/join`,'_blank')
     }
 
 
@@ -36,7 +30,7 @@ function NavBar(){
                         <NavLink to={'/achievements'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item hover:text-white"}} >Achievements </NavLink>
                     </div>
                 <div className="hidden md:block w-24 mr-3">
-                <button onClick={()=>{return routeChange()}} className=" border-[#0070BB] mt-2 bg-none border-[1px] px-3 py-[6px] rounded-lg hover:bg-[#0070BB] text-md text-nowrap">Join IEEE</button>
+                <button onClick={()=>{return redirect()}} className=" border-[#0070BB] mt-2 bg-none border-[1px] px-3 py-[6px] rounded-lg hover:bg-[#0070BB] text-md text-nowrap">Join IEEE</button>
                 </div> 
                 <div className="flex md:hidden">
                     Right side component

@@ -54,7 +54,7 @@ function NavBarMob() {
                 <NavLink className={(e)=>{return e.isActive? "text-sky-500":"text-white"}} to="/committee">Committee</NavLink>
             </li>
             <li className={`hover:underline decoration-sky-500 py-2 underline-offset-8 text-white`}>
-                <Events src="/ieee-bg.jpeg"/>
+                <Events/>
             </li>
             <li className="hover:underline decoration-sky-500 py-2 underline-offset-8">
                 <NavLink className={(e)=>{return e.isActive? "text-sky-500":"text-white"}} to="/acheivements">Acheivements</NavLink>
