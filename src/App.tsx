@@ -1,8 +1,8 @@
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import './App.css';
-import NavBarMob from './components/NavBarMob';
+import NavBarMob from './components/NavBar/NavBarMob';
 import { useState } from "react";
 
 function App(props: { src: string }) {

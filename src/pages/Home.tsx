@@ -1,10 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import EventsCard from '../components/EventsCard';
+import EventsCard from '../components/Events/EventsCard';
 import hackathons from '../../public/hackathons.svg'
 import workshops  from '../../public/workshops.svg'
 import networking from '../../public/networking.svg'
-import techEvents from '../../public/tech-events.jpg'
 import { GoDot, GoDotFill } from 'react-icons/go';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 //Gradient text - #5899E2 to #FFFFFF
@@ -27,6 +26,10 @@ type cards = {
   content:string
 }
 
+const redirect = ()=>{
+  window.open(`${window.location.origin}/join`,'_blank')
+}
+
 const eventCards:cards[] = [
   {
     imageUrl:'/hackthons.jpg',
@@ -47,6 +50,7 @@ const eventCards:cards[] = [
     content: "Connect with like minded peers and industry experts"
   }
 ]
+
  
 const Home = (props: { src: string }) => {
   const eventData = useState<eventInfo>();
@@ -77,7 +81,7 @@ const Home = (props: { src: string }) => {
 
           <h1 className='text-2xl md:text-7xl font-icona text-nowrap font-bold primary-text'> "Advancing Technology </h1>
           <div className='ml-4 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-9 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
-          <h2 className=' text-2xl ml-3 md:ml-7 mt-1 md:mt-2  md:text-7xl font-icona font-bold primary-text'> For Humanity"</h2>
+          <h2 className=' text-2xl ml-3 md:ml-7 mt-1 md:mt-2  md:text-7xl font-roboto font-bold primary-text'> For Humanity"</h2>
           <div className=' md:text-xl mt-10 md:mt-8 leading-2 ml-5 w-[52%] md:leading-7 font-montserrat secondary-text'>
           <p>At IEEE Student Branch, we harness the potential of technology to create a vibrant community focused on electronics, electrical, and computer engineering.</p>
           </div>
@@ -86,7 +90,7 @@ const Home = (props: { src: string }) => {
 
 
         <section className='min-h-screen flex-col bg-gradient-to-t from-[#08090a] via-[#141516] to-[#08090a]'>
-          <div className='text-2xl w-full md:text-7xl flex justify-center items-center font-icona'>
+          <div className='text-2xl w-full md:text-7xl flex justify-center items-center font-roboto'>
             <h1 className='mr-3 font-bold primary-text'>Learn.</h1><h1 className='mr-3 font-bold primary-text'>Innovate.</h1><h1 className='mr-3 font-bold primary-text'>Create.</h1>
           </div>
           <div className='flex-col mt-12 text-center justify-center items-center px-3'>
@@ -111,17 +115,17 @@ const Home = (props: { src: string }) => {
           </div>
         </section>
 
-
-        <section className='mt-20 h-screen w-full'>
+        {/* TODO: rethink and redo this section */}
+        {/* <section className='mt-20 h-screen w-full'>
             <div className='flex justify-start items-start ml-10 font-icona'>
               <h1 className='text-7xl primary-text ml-10'>EVENT NAME</h1>
             </div>
 
 
             <div className='flex justify-between items-center mt-32 ml-32'>
-              {/*All Static vlaues later to be added from state variable after fetching from backend (cache) */}
 
-              {/*Left Side div */}
+
+
               <div className='flex'>
 
                 <div className="flex-col">
@@ -141,7 +145,7 @@ const Home = (props: { src: string }) => {
 
               </div>
 
-              {/*Right side div */}
+
               <div className='flex flex-col justify-center items-center mx-20 w-full h-full'>
                   <div className='flex text-xl items-center font-oswald primary-text'>
                   <GoDotFill/><span className='ml-1 mr-5'>ROBOTICS</span>  <GoDotFill/><span className='ml-1 mr-5'>ARDUINO</span>  <GoDotFill/><span className='ml-1 mr-5'>IMAGE SENSORS</span>
@@ -153,20 +157,47 @@ const Home = (props: { src: string }) => {
                     </p>
                     <div className='flex gap-6 mt-5 font-roboto text-lg '>
                       <button className=' text-center bg-[#E6E6E6] hover:bg-white rounded-lg text-black px-5 leading-8'>Register Now</button> 
-                      <button className='text-center flex items-center bg-gradient-to-tr from-[#FFFFFF] to-[#141516] bg-clip-text text-transparent group'>Set Reminder <MdKeyboardArrowRight className='text-xl ml-2 text-white group-hover:translate-x-1 transition ease-in duration-200'/></button>
+                      <button className='text-center flex items-center bg-gradient-to-tr from-[#FFFFFF] to-[#141516] bg-clip-text text-transparent group'>Set Reminder </button>
                     </div>
                   </div>
                    
               </div>
             </div>
             
-        </section>
+        </section> */}
 
 
-        <section className='h-screen w-full bg-gradient-to-b flex justify-between px-10 from-[#08090a] to-[#141416]'>
-          <div>
+        <section className='h-[105vh] w-full mt-8 gradient-mask-b-70'>
+          <div className='ml-12'>
           <h1 className='text-6xl primary-text font-montserrat'>This Week's Highlight</h1>
-              <p className='secondary-text text-xl font-roboto mt-5 w-2/3 '>Checkout this week's articles from Students and <span className='secondary-text text-xl font-roboto inline-block text-white underline hover:cursor-pointer'>IEEE Members</span> and gain insightful knowledge on topics ranging from electronics to Tech.</p>
+              <p className='ternary-text text-xl font-roboto mt-5 w-2/3 font-light'>Checkout this week's articles from Students and <span className=' text-xl font-roboto inline-block primary-text underline hover:cursor-pointer' onClick={()=>redirect()}>IEEE Members</span> and gain insightful knowledge on topics ranging from electronics to Tech.</p>
+          </div>
+
+
+          <div className='w-full flex flex-col justify-start items-center mt-12 gap-12'>
+
+            <div className='box-gradient w-2/3 h-72  rounded-2xl border-[0.5px] border-[rgba(255,255,255,0.06)] flex items-start gap-6'>
+                <img src='/4276.avif' className='h-5/6 w-60 object-cover ml-5 mt-5 opacity-75 rounded-xl'></img>
+                <div className='pl-2'>
+                  <h1 className="primary-text text-3xl font-medium font-serif pt-5">Overview of GPT-o4 model by OpenAI</h1>
+                  <h2 className='pt-1 secondary-text font-light'>November 27,2024</h2>
+                  <p className='w-11/12 mt-5 font-montserrat ternary-text gradient-mask-b-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, ratione! Molestias fugit natus nisi illo, in officia illum unde expedita cupiditate voluptas earum. Provident corrupti expedita facere optio labore perferendis?</p>
+                  <span className='-mt-2 secondary-text underline '>Read More...</span>
+                  <span className='absolute bottom-0 flex items-center  pb-4'><img src='https://api.dicebear.com/9.x/micah/svg?seed=Felix' className='rounded-full h-10 w-10 mt-5'></img> <div className='text-start mt-4'> <h1 className='ml-2 ternary-text text-center'>Atharva K</h1><h3 className='text-xs quaternary-text ml-2'>CSE(AIML)</h3></div></span>
+                </div>
+            </div>
+
+            <div className='box-gradient w-2/3 h-72  rounded-2xl border-[0.5px] border-[rgba(255,255,255,0.06)] flex items-start gap-6'>
+                <img src='/download.jpeg' className='h-5/6 w-60 object-cover ml-5 mt-5 opacity-75 rounded-xl'></img>
+                <div className='pl-2'>
+                  <h1 className="primary-text text-3xl font-medium font-serif pt-5">Ethereum Ruling the Crypto Market</h1>
+                  <h2 className=' pt-1 secondary-text font-light'>November 27,2024</h2>
+                  <p className='w-11/12 mt-5 font-montserrat ternary-text gradient-mask-b-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, ratione! Molestias fugit natus nisi illo, in officia illum unde expedita cupiditate voluptas earum. Provident corrupti expedita facere optio labore perferendis?</p>
+                  <span className='-mt-2 secondary-text underline '>Read More...</span>
+                  <span className='absolute bottom-0 flex items-center  pb-4'><img src='https://api.dicebear.com/9.x/micah/svg?seed=Felix' className='rounded-full h-10 w-10 mt-5'></img> <div className='text-start mt-4'> <h1 className='ml-2 ternary-text text-center'>Atharva K</h1><h3 className='text-xs quaternary-text ml-2'>CSE(AIML)</h3></div></span>
+                </div>
+            </div>
+             
           </div>
               
         </section>

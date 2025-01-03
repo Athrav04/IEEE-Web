@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Footer from "./Footer"
-import NavBar from "./NavBar"
-import NavBarMob from "./NavBarMob";
+import NavBar from "./NavBar/NavBar"
+import NavBarMob from "./NavBar/NavBarMob";
 
 function Acheivements() {
       const [long, setLong] = useState(false);

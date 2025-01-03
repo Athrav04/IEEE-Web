@@ -9,6 +9,7 @@ import { ReactLenis, useLenis } from 'lenis/react'
 import PdfViewer from './components/PdfViewer.tsx';
 
 function Lenis({children}:PropsWithChildren) {
+
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   })
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage />
   },
   {
-    path:'/acheivements',
+    path:'/Chapter',
     errorElement:<ErrorPage />
   },
   {

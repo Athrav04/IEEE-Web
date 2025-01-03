@@ -14,28 +14,63 @@
 }
 
 @font-face {
-    font-family: 'barber1';
-    src: url('/Barber-Fill.otf');
-}
-@font-face {
-    font-family: 'barber2';
-    src: url('/Barber-Outline.otf');
-}
-@font-face {
-    font-family: 'barber3';
-    src: url('/Barber-Right.otf');
-}
-@font-face {
-    font-family: 'barber4';
-    src: url('/Barber-Shadow.otf');
+    font-family: 'Genome';
+    src: url('/LARGEST GENOME DEMO.otf');
 }
 
+ 
 @layer utilities {
 .gradient-text-2 {
-    background-image: linear-gradient(to right,#5899E2,#FFFFFF,#5899E2,#FFFFFF);
+    background-image: linear-gradient(to right,#2b81e5,#FFFFFF,#2b81e5,#FFFFFF);
     background-size: 300% 300%;
     background-clip: text;
 }
+.translucent-card {
+    background-image: linear-gradient(to bottom right,#252627,#08090a);
+    border: 0.5px solid #484849;
+}
+.gradient-bg {
+    background-image: conic-gradient(from 90deg,#5899E2 0deg,#5899E2 0deg,transparent 30deg);
+}
+
+.box-gradient{
+    background-image: linear-gradient(to bottom,rgba(255,255,255,0.04) 0%,#08090a 200%);
+    position: relative;
+}
+.box-gradient:hover{
+    background-image: linear-gradient(to bottom,rgba(255,255,255,0.06) 0%,#08090a 200%);
+    position: relative;
+    @apply transition ease-in duration-200
+}
+
+.about-bg{
+    @apply rounded-full h-72 w-72 absolute filter blur-xl opacity-75 
+}
+.delay-2000 {
+    animation-delay: 2000ms;
+}
+.highlight-bg {
+    @apply bg-transparent bg-opacity-5 rounded-lg relative
+}
+.highlight-bg::after {
+    @apply absolute top-0 left-0 w-full h-1/3 bg-[url('/atmosphere.jpg')] bg-opacity-5 content-[''] object-cover rounded-t-lg
+}
+.highlight-bg::before {
+    @apply absolute top-0 left-0 w-full h-1/3 bg-black opacity-40 content-[''] rounded-t-lg object-cover z-10
+}
+
+.eventCard {
+    @apply relative bg-[#08090a] w-[75%] h-[100%] rounded-3xl overflow-hidden rounded-b-none
+}
+.eventCard::before , .eventCard::after {
+    @apply content-[''] absolute h-[250%] w-[150%] rounded-3xl gradient-bg animate-conic 
+}
+
+.eventCard::before {
+    @apply blur-xl
+}
+
+
 }
 
 @layer components {
@@ -50,6 +85,9 @@
     }
     .ternary-text{
         @apply text-[#8a8f98]
+    }
+    .quaternary-text{
+        @apply text-[#62666d]
     }
     .navBar-Item {
         @apply px-4 font-light text-lg text-[#dee2e6]

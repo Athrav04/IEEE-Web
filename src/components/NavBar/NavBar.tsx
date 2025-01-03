@@ -27,10 +27,10 @@ function NavBar(){
                         <NavLink to={'/about'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold ":"navBar-Item hover:text-white"}}>About </NavLink>
                         <NavLink to={'/committee'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item  hover:text-white"}}>Committee </NavLink>
                         <NavLink to={'/events'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item  hover:text-white"}}>Events </NavLink>
-                        <NavLink to={'/achievements'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item hover:text-white"}} >Achievements </NavLink>
+                        <NavLink to={'/Chapter'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item hover:text-white"}} >Chapter </NavLink>
                     </div>
                 <div className="hidden md:block w-24 mr-3">
-                <button onClick={()=>{return redirect()}} className=" border-[#0070BB] mt-2 bg-none border-[1px] px-3 py-[6px] rounded-lg hover:bg-[#0070BB] text-md text-nowrap">Join IEEE</button>
+                <button onClick={()=>{return redirect()}} className=" border-[#0070BB] mt-2 bg-none border-[1px] px-3 py-[6px] rounded-lg hover:bg-[#0040FF] text-md text-nowrap">Join IEEE</button>
                 </div> 
                 <div className="flex md:hidden">
                     Right side component

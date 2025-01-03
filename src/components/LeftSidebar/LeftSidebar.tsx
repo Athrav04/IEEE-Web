@@ -17,13 +17,13 @@ const LeftSidebar = () => {
         </div>
       </div>
        <div className='mt-8'>
-        <div className={`flex items-center my-5 py-2 px-2 rounded-md${active.Home == true ? ' bg-[#1A1C1F] text-white':'hover:bg-[#1b1c1d]'}`} onClick={()=>setActive({Home:true,Events:false,Committee:false})}>
+        <div className={`flex items-center my-5 py-2 px-2 rounded-md secondary-text ${active.Home == true ? ' bg-[#1A1C1F] text-white transition ease-in duration-300':' hover:bg-[#1A1C1F] transiton ease-in duration-200'}`} onClick={()=>setActive({Home:true,Events:false,Committee:false})}>
             <RiHome6Fill className={`text-xl  ${active.Home == true ? 'primary-text':'text-[#495057]'}`}/> <p className='ml-3 text-xl hover:cursor-pointer font-light hover:text-white'>Home</p>
         </div>
-        <div className={`flex items-center my-5 py-2 px-2 rounded-md${active.Events == true ? ' bg-[#1A1C1F] text-white':''}`}onClick={()=>setActive({Home:false,Events:true,Committee:false})}>
+        <div className={`flex items-center my-5 py-2 px-2 rounded-md secondary-text  ${active.Events == true ? ' bg-[#1A1C1F] text-white transition ease-in duration-300':'hover:bg-[#1A1C1F] transiton ease-in duration-200'}`}onClick={()=>setActive({Home:false,Events:true,Committee:false})}>
             <BsProjectorFill className={`text-xl ${active.Events == true ? 'primary-text':'text-[#495057]'}`}/>  <p className='ml-3 text-xl hover:cursor-pointer font-light hover:text-white'>Events</p>
         </div>
-        <div className={`flex items-center my-5 py-2 px-2 rounded-md${active.Committee == true ? ' bg-[#1A1C1F] text-white':''}`}onClick={()=>setActive({Home:false,Events:false,Committee:true})}>
+        <div className={`flex items-center my-5 py-2 px-2 rounded-md secondary-text ${active.Committee == true ? ' bg-[#1A1C1F] text-white transition ease-in duration-300':'hover:bg-[#1A1C1F] transiton ease-in duration-200'}`}onClick={()=>setActive({Home:false,Events:false,Committee:true})}>
              <BsPeopleFill className={`text-xl ${active.Committee == true ? 'primary-text':'text-[#495057]'}`}/><p className='ml-3 text-xl hover:cursor-pointer font-light hover:text-white'>Committee</p>
         </div>
     </div>

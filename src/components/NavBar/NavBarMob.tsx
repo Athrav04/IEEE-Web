@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Events from "../pages/Events";
+import Events from "../../pages/Events";
 import { useNavigate } from "react-router-dom";
 
 import React from "react";
