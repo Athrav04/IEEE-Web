@@ -3,18 +3,19 @@ import CountDown from "../components/Events/CountDown";
 import Upcoming from "../components/Events/Upcoming";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Gallery from "../components/Events/Gallery";
+import Footer from "../components/Footer";
 
  
 
 function Events() {
     return(
-        <div className="h-screen max-w-full">
-            <div className="fixed w-ful z-50">
+        <div className="h-screen w-full overflow-x-hidden">
+            <div className="fixed z-50">
                 <NavBar />
             </div>
 
-            <div className=" h-screen w-full flex flex-col justify-center items-center relative bg-gradient-to-t from-[#08090a] via-[#141516] to-[#08090a]">
-                <h1 className="text-6xl primary-text -mt-96 font-montserrat bg-gradient-to-b from-[#979E9F] via-[#979E9F] to-[#4C565C] bg-clip-text text-transparent ">Join Us At</h1>
+            <div className="h-screen w-full flex flex-col justify-center items-center relative bg-gradient-to-t from-[#08090a] via-[#141516] to-[#08090a]">
+                <h1 className="text-6xl primary-text -mt-96 font-montserrat bg-gradient-to-b from-[#FFFFFF] via-[#FFFFFF] to-[#4C565C] bg-clip-text text-transparent ">Join Us At</h1>
                 <div className="absolute w-full h-2/3 top-1/3 flex justify-center items-center overflow-hidden">
                     <div className=" flex justify-center items-center eventCard ">
                         <div className="h-[100%] w-[calc(100%-2px)] border-transparent flex flex-col top-[0.5px] border-[0.5px] absolute justify-start items-center bg-[#08090a] rounded-t-3xl z-10">
@@ -35,8 +36,8 @@ function Events() {
 
             <div className="h-4/5 w-full">
                 <div className="translate-x-48 translate-y-28 relative">
-                    <h1 className=" font-montserrat primary-text text-3xl">Upcoming Events...</h1>
-                    {/* <div className="absolute w-2/5 h-3/4  bg-red-50 -translate-x-20"></div> */}
+                    <h1 className=" font-montserrat primary-text text-3xl">Event Calendar</h1>
+
                     <div className="mt-5 w-full flex flex-col gap-4">
                         <Upcoming time="14:30" date="Today"/>
                         <Upcoming time="13:00" date="21 Oct"/>
@@ -46,9 +47,27 @@ function Events() {
                 
             </div>
 
-            <div className="h-[150vh] w-full ml-48 flex flex-col">
-                <h1 className="font-montserrat text-5xl primary-text text-center">Gallery</h1> 
-                <Gallery/>
+            <div className="h-screen w-full ml-48 flex flex-col mt-10">
+                <h1 className="font-montserrat text-5xl primary-text text-start">Gallery</h1> 
+                <div className="grid grid-cols-4 grid-rows-3 h-full w-4/5 gap-4 mt-5 content-center">
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                    <Gallery/>
+                </div>
+            </div>
+
+            <div className=" relative h-[25vh] w-full  flex items-center justify-evenly mt-28">
+                <div className="absolute -bottom-12 -left-12 bg-blue-600 w-44 h-44 filter blur-3xl opacity-65 rounded-full animate-blob"></div>
+                <h1 className="primary-text text-5xl font-montserrat flex flex-col font-semibold items-start">Get Notified about <span>Our upcoming events</span> </h1>
+                <div className="flex items-center gap-4"><input className="h-12 w-72 primary-text border-[#484849] border-[0.5px] bg-[#232326] rounded-md placeholder:ternary-text p-2  focus:outline-none placeholder:text-lg placeholder:font-light" placeholder="Enter your email "></input>
+                    <button className="text-lg font-roboto rounded-md bg-gradient-to-tr from-[#6A89CC] to-[#2D3C56] primary-text py-2 px-3">Subscribe</button>
+                </div>
             </div>
 
 

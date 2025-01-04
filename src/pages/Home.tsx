@@ -6,6 +6,7 @@ import workshops  from '../../public/workshops.svg'
 import networking from '../../public/networking.svg'
 import { GoDot, GoDotFill } from 'react-icons/go';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import Highlights from '../components/Highlights';
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
@@ -169,34 +170,13 @@ const Home = (props: { src: string }) => {
 
         <section className='h-[105vh] w-full mt-8 gradient-mask-b-70'>
           <div className='ml-12'>
-          <h1 className='text-6xl primary-text font-montserrat'>This Week's Highlight</h1>
+          <h1 className='text-6xl primary-text font-montserrat font-medium'>This Week's Highlight</h1>
               <p className='ternary-text text-xl font-roboto mt-5 w-2/3 font-light'>Checkout this week's articles from Students and <span className=' text-xl font-roboto inline-block primary-text underline hover:cursor-pointer' onClick={()=>redirect()}>IEEE Members</span> and gain insightful knowledge on topics ranging from electronics to Tech.</p>
           </div>
 
 
-          <div className='w-full flex flex-col justify-start items-center mt-12 gap-12'>
-
-            <div className='box-gradient w-2/3 h-72  rounded-2xl border-[0.5px] border-[rgba(255,255,255,0.06)] flex items-start gap-6'>
-                <img src='/4276.avif' className='h-5/6 w-60 object-cover ml-5 mt-5 opacity-75 rounded-xl'></img>
-                <div className='pl-2'>
-                  <h1 className="primary-text text-3xl font-medium font-serif pt-5">Overview of GPT-o4 model by OpenAI</h1>
-                  <h2 className='pt-1 secondary-text font-light'>November 27,2024</h2>
-                  <p className='w-11/12 mt-5 font-montserrat ternary-text gradient-mask-b-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, ratione! Molestias fugit natus nisi illo, in officia illum unde expedita cupiditate voluptas earum. Provident corrupti expedita facere optio labore perferendis?</p>
-                  <span className='-mt-2 secondary-text underline '>Read More...</span>
-                  <span className='absolute bottom-0 flex items-center  pb-4'><img src='https://api.dicebear.com/9.x/micah/svg?seed=Felix' className='rounded-full h-10 w-10 mt-5'></img> <div className='text-start mt-4'> <h1 className='ml-2 ternary-text text-center'>Atharva K</h1><h3 className='text-xs quaternary-text ml-2'>CSE(AIML)</h3></div></span>
-                </div>
-            </div>
-
-            <div className='box-gradient w-2/3 h-72  rounded-2xl border-[0.5px] border-[rgba(255,255,255,0.06)] flex items-start gap-6'>
-                <img src='/download.jpeg' className='h-5/6 w-60 object-cover ml-5 mt-5 opacity-75 rounded-xl'></img>
-                <div className='pl-2'>
-                  <h1 className="primary-text text-3xl font-medium font-serif pt-5">Ethereum Ruling the Crypto Market</h1>
-                  <h2 className=' pt-1 secondary-text font-light'>November 27,2024</h2>
-                  <p className='w-11/12 mt-5 font-montserrat ternary-text gradient-mask-b-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, ratione! Molestias fugit natus nisi illo, in officia illum unde expedita cupiditate voluptas earum. Provident corrupti expedita facere optio labore perferendis?</p>
-                  <span className='-mt-2 secondary-text underline '>Read More...</span>
-                  <span className='absolute bottom-0 flex items-center  pb-4'><img src='https://api.dicebear.com/9.x/micah/svg?seed=Felix' className='rounded-full h-10 w-10 mt-5'></img> <div className='text-start mt-4'> <h1 className='ml-2 ternary-text text-center'>Atharva K</h1><h3 className='text-xs quaternary-text ml-2'>CSE(AIML)</h3></div></span>
-                </div>
-            </div>
+          <div className='w-full flex flex-col justify-start items-center mt-20 gap-12'>
+            <Highlights/>
              
           </div>
               

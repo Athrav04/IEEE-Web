@@ -9,17 +9,7 @@ console.log('clicked')
 
 const Gallery = () => {
   return (
-    <div className="grid grid-cols-4 grid-rows-6 h-full w-4/5 gap-4">
-      <div className="bg-red-500 hover:row-span-2  "></div>
-      <div className="bg-red-500 rounded-xl"></div>
-      <div className="bg-red-500"></div>
-      <div className="bg-red-500"></div>
-      <div className="bg-red-500"></div>
-      <div className="bg-red-500"></div>
-      <button onClick={()=>handleClick()} className="text-white p-3 text-2xl"> Click me</button>
-
-
-    </div>
+    <div className="bg-red-500 rounded-xl hover:scale-125 transition ease-in duration-200 hover:z-10 hover:h-96 hover:w-72 hover:bg-transparent hover:border hover:border-blue-500"></div>
   )
 }
 

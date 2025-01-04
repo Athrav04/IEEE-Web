@@ -11,7 +11,6 @@ import PdfViewer from './components/PdfViewer.tsx';
 function Lenis({children}:PropsWithChildren) {
 
   const lenis = useLenis(({ scroll }) => {
-    // called every scroll
   })
 
   return (
