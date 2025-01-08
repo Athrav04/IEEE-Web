@@ -67,9 +67,9 @@ const Home = (props: { src: string }) => {
         <div className='flex-col ml-2 md:ml-10 md:w-1/2 justify-center md:justify-start items-center xl:w-ful'>
             <h1 className=' text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'>IEEE VIIT</h1>
             <h2 className=' text-2xl md:text-6xl mt-1 font-light text-nowrap'>Student Branch</h2>
-            <div className='flex mt-2 group'>
-              <p className='font-montserrat px-1 cursor-default md:text-lg group-hover:border-b-2 text-center' onClick={()=>navigate('/about')}>About us</p>
-              <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2  ease-in duration-100 group-hover:translate-x-1' onClick={()=>navigate('/about')}></img>
+            <div className='flex  group items-center w-40'>
+              <p className='font-montserrat px-1 cursor-default md:text-lg  group-hover:border-b-2 text-center transition duration-200 ease-in' onClick={()=>navigate('/about')}>About us</p>
+              <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2  group-hover:translate-x-1 transition-transform duration-300 ease-in-out' onClick={()=>navigate('/about')}></img>
             </div>
          </div>
          <div className='hidden  md:block w-3/4  h-full opacity-50 object-cover'>
@@ -78,11 +78,14 @@ const Home = (props: { src: string }) => {
         </section>
 
 
-        <section className='mt-0 pl-5 min-h-[50vh] md:min-h-[60vh] w-full md:pt-14 bg-gradient-to-t from-[#08090a] to-[#141516]'>
-
+        <section className='mt-0 pl-5 min-h-[50vh] md:min-h-[60vh] w-full md:pt-14 bg-gradient-to-t from-[#08090a] to-[#141516] relative overflow-hidden z-0 '>
+           {/* <div className='bg-gradient-to-tr from-[#1a73e8] to-[#00d4ff] about-bg  ml-44 mb-20 animate-blob -top-16 -left-60 z-10'></div> */}
+           {/* <div className='bg-gradient-t-tr from-[#3a86ff] to-[#8338ec] about-bg  ml-64 mb-20 animate-blob delay-2000'></div> */}
+          <div className='z-30'>
           <h1 className='text-2xl md:text-7xl font-icona text-nowrap font-bold primary-text'> "Advancing Technology </h1>
           <div className='ml-4 max-w-28 bg-gradient-to-r from-[#2f4f9a] via-[#2f4f9a] to-[#0a0a0a] h-1 md:ml-9 md:mt-1 md:h-2 md:max-w-72 animate-animatedUnderline'></div>
           <h2 className=' text-2xl ml-3 md:ml-7 mt-1 md:mt-2  md:text-7xl font-roboto font-bold primary-text'> For Humanity"</h2>
+          </div>
           <div className=' md:text-xl mt-10 md:mt-8 leading-2 ml-5 w-[52%] md:leading-7 font-montserrat secondary-text'>
           <p>At IEEE Student Branch, we harness the potential of technology to create a vibrant community focused on electronics, electrical, and computer engineering.</p>
           </div>

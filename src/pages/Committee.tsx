@@ -3,6 +3,7 @@ import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar/NavBar'
 import TeamCard from '../components/TeamCard'
+import GraphBg from '../components/GraphBg'
 
 
 export enum Team {Core,Event,Design,WebDev,Video,Tech,All}
@@ -58,9 +59,11 @@ const Committee = (props: { src: string}) => {
 
   const src = props.src;
   return (
-    <div className='h-screen w-full'>
+    <div className='h-screen w-full realtive'>
+      <GraphBg/>
+            <div className="absolute flex justify-center items-center h-full w-full radial-bg-gradient"/>
       <div className='fixed z-10 '><NavBar/></div> 
-      <section className='h-screen w-full bg-gradient-to-t from-[#08090a] via-[#2C3339] to-[#08090a] relative inset-0'>
+      <section className='h-screen w-full relative inset-0'>
           <div className='primary-text font-montserrat font-medium absolute inset-0 flex flex-col items-center justify-center'>
             <h1 className='text-8xl'> Our <span className='gradient-text-2 text-transparent animate-gradient'>Committee</span></h1>
             <h2 className='text-center text-7xl'>For 2024-25</h2>

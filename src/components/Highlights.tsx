@@ -3,7 +3,7 @@ const Highlights = () => {
   return (
     <div className="flex flex-col justify-start items-start ml-10 gap-6  ">
       
-       <div className='box-gradient w-2/3 h-64  rounded-2xl border-[0.5px] border-[rgba(255,255,255,0.06)] flex items-start gap-6'>
+       <div className='box-gradient w-2/3 h-64  rounded-2xl border-[0.5px] border-[rgba(255,255,255,0.06)] flex items-start gap-6' onClick={()=>window.open('localhost:3000')}>
     <img src='/4276.avif' className='h-5/6 w-60 object-cover ml-5 mt-5 opacity-75 rounded-xl'></img>
     <div className='pl-2'>
       <h1 className="primary-text text-3xl font-medium font-serif pt-5">Overview of GPT-o4 model by OpenAI</h1>

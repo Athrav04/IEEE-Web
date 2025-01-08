@@ -1,15 +1,57 @@
-function handleClick() {
-console.log('clicked')
-  return (
-    <div className="w-full h-screen flex justify-center items-center text-center backdrop-blur-lg">
-      I am a Modal
-    </div>
-  )
-}
+import { useState } from "react";
 
-const Gallery = () => {
+const Gallery = ({imgUrl,delay}:{imgUrl:string,delay:string}) => {
+  const [showModal,setShowModal] = useState(false);
   return (
-    <div className="bg-red-500 rounded-xl hover:scale-125 transition ease-in duration-200 hover:z-10 hover:h-96 hover:w-72 hover:bg-transparent hover:border hover:border-blue-500"></div>
+    <div className={`eventsContainer animate-cardSlider`} style={{animationDelay:`${delay}ms`}}>
+      <div className="eventsFloatingCard rounded-lg">
+        <div className="w-full rounded-lg ">
+          <img src={imgUrl} className="h-full w-full object-cover rounded-lg" alt="Event image"></img>
+        </div>
+        <h3 className="text-start primary-text">Testimonial</h3>
+      </div>
+
+      <div className="eventsFloatingCard rounded-lg">
+        <div className="w-full rounded-lg ">
+          <img src={imgUrl} className="h-full w-full object-cover rounded-lg" alt="Event image"></img>
+        </div>
+        <h3 className="text-start primary-text">Testimonial</h3>
+      </div>
+
+      <div className="eventsFloatingCard rounded-lg">
+        <div className="w-full rounded-lg ">
+          <img src={imgUrl} className="h-full w-full object-cover rounded-lg" alt="Event image"></img>
+        </div>
+        <h3 className="text-start primary-text">Testimonial</h3>
+      </div>
+
+      <div className="eventsFloatingCard rounded-lg">
+        <div className="w-full rounded-lg ">
+          <img src={imgUrl} className="h-full w-full object-cover rounded-lg" alt="Event image"></img>
+        </div>
+        <h3 className="text-start primary-text">Testimonial</h3>
+      </div>
+
+      <div className="eventsFloatingCard rounded-lg">
+        <div className="w-full rounded-lg ">
+          <img src={imgUrl} className="h-full w-full object-cover rounded-lg" alt="Event image"></img>
+        </div>
+        <h3 className="text-start primary-text">Testimonial</h3>
+      </div>
+
+      <div className="eventsFloatingCard rounded-lg">
+        <div className="w-full rounded-lg ">
+          <img src={imgUrl} className="h-full w-full object-cover rounded-lg" alt="Event image"></img>
+        </div>
+        <h3 className="text-start primary-text">Testimonial</h3>
+      </div>
+
+
+
+    </div>
+
+    
+   
   )
 }
 

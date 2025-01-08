@@ -12,9 +12,9 @@ const About = () => {
       <div className='h-screen w-full flex flex-col justify-center items-center text-center relative'>
         {/* <div className='bg-blue-500 about-bg  ml-44 mb-20 animate-blob'></div>
         <div className='bg-blue-500 about-bg  ml-64 mb-20 animate-blob delay-2000'></div>
-        <div className='bg-yellow-500 about-bg mr-56 mt-20 animate-blob delay-2000'></div> */}
-        <span className='primary-text text-5xl z-10 font-montserrat bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent f'>Institue of Electronics and Electrical Engineering (IEEE)</span>
-        <span className='primary-text text-3xl font-montserrat mt-2'>Viit Student Branch</span>
+        <div className='bg-yellow-500 about-bg mr-56 mt-20 animate-blob delay-3000'></div> */}
+        <span className=' text-5xl  font-montserrat z-10 bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent '>Institue of Electronics and Electrical Engineering (IEEE)</span>
+        <span className='primary-text text-3xl font-montserrat z-10 mt-2'>VIIT Student Branch</span>
       </div>
 
       <div className='h-[70vh] w-full'>

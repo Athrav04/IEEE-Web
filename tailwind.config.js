@@ -34,7 +34,11 @@ export default {
         },
         conicSpin:{
           '100%':{transform:'rotate(-360deg)'}
-        }
+        },
+        cardSlider:{
+            '0%':{transform:'translateX(0px)'},
+            '100%':{transform:'translateX(-100%)'}
+          }
       },
       backgroundImage:{
           'cardGradient':"linear-gradient(45deg,#2F7FDA,#2575D0,#86B4EA,#FFFFFF,#FFFFFF)",
@@ -46,7 +50,8 @@ export default {
         animateText:'animateText 2s ease-in-out infinite',
         gradient:'animatedGradient 3s linear infinite',
         conic:'conicSpin 10s linear infinite',
-        blob:'blob 25s infinite'
+        blob:'blob 25s infinite',
+        cardSlider:'cardSlider 30s linear infinite forwards'
       },
       backgroundSize: {
         'auto':'auto',

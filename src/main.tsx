@@ -69,8 +69,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Lenis>
+
     <RouterProvider fallbackElement={<ErrorPage/>} router={router}/>
-    </Lenis>
+
   </StrictMode>,
 )

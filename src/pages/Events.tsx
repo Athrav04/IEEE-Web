@@ -4,21 +4,26 @@ import Upcoming from "../components/Events/Upcoming";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Gallery from "../components/Events/Gallery";
 import Footer from "../components/Footer";
+import GraphBg from "../components/GraphBg";
+import Gradient from "../components/Events/Gradient";
 
  
 
 function Events() {
     return(
-        <div className="h-screen w-full overflow-x-hidden">
+        <div className="h-screen w-full overflow-x-hidden relative">
+            <GraphBg/>
+            <div className="absolute flex justify-center items-center h-full w-full radial-bg-gradient"/>
+
             <div className="fixed z-50">
                 <NavBar />
             </div>
 
-            <div className="h-screen w-full flex flex-col justify-center items-center relative bg-gradient-to-t from-[#08090a] via-[#141516] to-[#08090a]">
+            <div className="h-screen w-full flex flex-col justify-center items-center relative">
                 <h1 className="text-6xl primary-text -mt-96 font-montserrat bg-gradient-to-b from-[#FFFFFF] via-[#FFFFFF] to-[#4C565C] bg-clip-text text-transparent ">Join Us At</h1>
                 <div className="absolute w-full h-2/3 top-1/3 flex justify-center items-center overflow-hidden">
                     <div className=" flex justify-center items-center eventCard ">
-                        <div className="h-[100%] w-[calc(100%-2px)] border-transparent flex flex-col top-[0.5px] border-[0.5px] absolute justify-start items-center bg-[#08090a] rounded-t-3xl z-10">
+                        <div className="h-full w-[calc(100%-2px)] border-transparent border-b flex flex-col top-[0.5px] border-[0.5px] absolute justify-start items-center bg-[#08090a] rounded-t-3xl z-10">
                              <h1 className="text-6xl primary-text mt-10 font-Genome  flex bg-[url('/outerSpace.jpg')] object-contain bg-clip-text text-transparent"><span>Python</span> &nbsp;<span className="bg-[url('/outerSpace.jpg')] object-contain bg-clip-text text-transparent">Odyssey</span></h1>
                                 <p className="text-3xl secondary-text mt-5 font-montserrat">On 12 January 2024 at 14:30 IST</p>
                                     <div className="w-full flex justify-center items-center gap-6 mt-5 font-roboto">
@@ -46,29 +51,37 @@ function Events() {
                 </div>
                 
             </div>
+            
+            <h1 className="font-montserrat text-3xl primary-text text-center ml-48 w-full">Event Gallery</h1> 
+                
+            <div className="h-[110vh] w-full  mt-10 relative max-w-full">
+                <div className="absolute top-0 left-0 border-red-700 b">
+                    <Gallery imgUrl="/temp.jpg" delay="0"/>
+                    <Gallery imgUrl="/temp.jpg" delay="1200"/>
+                    <Gallery imgUrl="/temp.jpg" delay="500"/>
+                </div>
+                <div className="absolute top-0 left-[2064px]">
+                    <Gallery imgUrl="/temp.jpg" delay="0"/>
+                    <Gallery imgUrl="/temp.jpg" delay="1200"/>
+                    <Gallery imgUrl="/temp.jpg" delay="500"/>
+                </div>
+                
+            </div>
 
-            <div className="h-screen w-full ml-48 flex flex-col mt-10">
-                <h1 className="font-montserrat text-5xl primary-text text-start">Gallery</h1> 
-                <div className="grid grid-cols-4 grid-rows-3 h-full w-4/5 gap-4 mt-5 content-center">
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
-                    <Gallery/>
+            <div className=" relative h-[100vh] w-full  flex flex-col items-center justify-center mt-28">
+                <GraphBg/>
+
+                <div className="flex flex-col items-center justify-center text-center">
+                <h1 className="primary-text text-5xl font-montserrat flex flex-col font-semibold items-start z-10 place-self-center">Get Notified about </h1>
+                <span className="primary-text text-5xl font-montserrat flex flex-col font-semibold items-start z-10 place-self-center">Our upcoming events</span> 
+
+                <div className="flex items-center gap-4 ml-10 z-10 mt-5"><input className="h-12 w-72 primary-text border-[#484849] border-[0.5px] bg-[#232326] rounded-md placeholder:ternary-text p-2  focus:outline-none placeholder:text-lg placeholder:font-thin" placeholder="Enter your email "></input>
+                    <button className="text-lg font-roboto rounded-md bg-white/95 text-black py-2 px-3 opacity-95 hover:opacity-100 transform ease-in duration-100">Subscribe</button>
+                </div>
                 </div>
             </div>
 
-            <div className=" relative h-[25vh] w-full  flex items-center justify-evenly mt-28">
-                <div className="absolute -bottom-12 -left-12 bg-blue-600 w-44 h-44 filter blur-3xl opacity-65 rounded-full animate-blob"></div>
-                <h1 className="primary-text text-5xl font-montserrat flex flex-col font-semibold items-start">Get Notified about <span>Our upcoming events</span> </h1>
-                <div className="flex items-center gap-4"><input className="h-12 w-72 primary-text border-[#484849] border-[0.5px] bg-[#232326] rounded-md placeholder:ternary-text p-2  focus:outline-none placeholder:text-lg placeholder:font-light" placeholder="Enter your email "></input>
-                    <button className="text-lg font-roboto rounded-md bg-gradient-to-tr from-[#6A89CC] to-[#2D3C56] primary-text py-2 px-3">Subscribe</button>
-                </div>
-            </div>
+            <Footer/>
 
 
 

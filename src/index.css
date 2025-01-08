@@ -20,6 +20,17 @@
 
  
 @layer utilities {
+
+
+.pause-animation {
+    animation-play-state: paused;
+}
+.login-bg {
+    background-image: linear-gradient(rgb(15, 16, 17) 0%, rgb(8, 8, 8) 50%);
+}
+.radial-bg-gradient {
+    background-image: radial-gradient(50% 50% at 50% 50%, hsla(245deg, 42%, 42%, .60) 20%, rgba(0, 0, 0, 0) 100%);
+}
 .gradient-text-2 {
     background-image: linear-gradient(to right,#2b81e5,#FFFFFF,#2b81e5,#FFFFFF);
     background-size: 300% 300%;
@@ -44,7 +55,7 @@
 }
 
 .about-bg{
-    @apply rounded-full h-72 w-72 absolute filter blur-xl opacity-75 
+    @apply rounded-full -rotate-12 h-72 w-72 absolute filter blur-xl opacity-75 
 }
 .delay-2000 {
     animation-delay: 2000ms;
@@ -70,6 +81,43 @@
     @apply blur-xl
 }
 
+.eventsContainer {
+    animation-direction: reverse;
+    @apply flex flex-nowrap justify-center relative w-fit mb-8 
+}
+.eventsFloatingCard {
+    @apply relative w-[320px] h-full z-10 mr-6 cursor-pointer 
+}
+
+
+
+
+
+
+
+.graph-container {
+    @apply absolute top-0 left-0 w-full  h-full -z-10
+}
+.graph-column-container {
+    @apply h-full w-full overflow-hidden flex flex-nowrap absolute
+}
+.graph-column-item {
+    border-left: 0.5px solid hsla(240deg, 5%, 67%, 0.1);
+    flex: 0 0 70px;
+}
+
+.graph-row-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    @apply h-full w-full absolute
+}
+.graph-row-item {
+    border-top: .5px solid hsla(240deg, 5%, 67%, 0.1);
+    flex: 0 0 70px;
+}
+
 
 }
 
@@ -78,7 +126,7 @@
         @apply bg-[#08090a]
     }
     .primary-text{
-        @apply text-[#f7f8f8]
+        @apply text-[#f7f8f8] 
     }
     .secondary-text{
         @apply text-[#A4A4A5]
