@@ -9,12 +9,12 @@ interface EventCardProps {
 const EventsCard = ({imageUrl,type,icon,content}:EventCardProps) => {
   return (
     <>
-        <section className='h-[390px] w-60 mb-5 lg:min-h-[410px] lg:w-72 xl:h-[500px] xl:w-96 rounded-3xl bg-[#141516] transition ease-in duration-150 hover:scale-105'>
-          <div className='h-2/3 rounded-3xl'>
-            <img src={imageUrl} alt='events' className='h-full w-full object-cover rounded-t-3xl gradient-mask-b-0'></img>
+        <section className='h-[390px] w-60 mb-5 lg:min-h-[410px] lg:w-72 xl:h-[500px] xl:w-96 rounded-3xl bg-[#141516] group overflow-hidden'>
+          <div className='h-2/3 rounded-3xl group'>
+            <img src={imageUrl} alt='events' className='h-full w-full object-cover rounded-t-3xl gradient-mask-b-0 group-hover:scale-105 transition ease-in duration-200'></img>
           </div>
 
-          <div className='flex-col px-3'>
+          <div className='flex-col px-3 group'>
 
             <div className='flex justify-between lg:mt-3'>
               <h1 className='font-montserrat lg:text-xl primary-text font-medium lg:pl-3'>{type}</h1>
@@ -27,7 +27,7 @@ const EventsCard = ({imageUrl,type,icon,content}:EventCardProps) => {
 
          
           
-          <a className=' pl-3 lg:pl-6 mt-4 lg:mt-9 inline-block text-xs lg:text-sm primary-text font-thin hover:underline hover:cursor-pointer '>Learn More &rarr;</a>
+          <a className=' pl-3 lg:pl-6 mt-4 lg:mt-9 inline-block text-xs lg:text-sm primary-text font-thin hover:underline hover:cursor-pointer group'>Learn More &rarr;</a>
             
         </section>
     </>

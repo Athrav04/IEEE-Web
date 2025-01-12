@@ -81,7 +81,19 @@
     @apply blur-xl
 }
 
-.eventsContainer {
+
+
+.eventContainer {
+    @apply h-screen w-full  mt-10 relative max-w-full 
+}
+.eventContainer::after {
+    content: '';
+    background: #08090a;
+    mask-image: linear-gradient(to right,black 0%,transparent 15%,transparent 85%,black 100%);
+    z-index: 20;
+    @apply absolute top-0 left-0 w-full h-full 
+}
+.eventSlider {
     animation-direction: reverse;
     @apply flex flex-nowrap justify-center relative w-fit mb-8 
 }

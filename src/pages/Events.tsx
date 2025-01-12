@@ -52,15 +52,15 @@ function Events() {
                 
             </div>
             
-            <h1 className="font-montserrat text-3xl primary-text text-center ml-48 w-full">Event Gallery</h1> 
+            <h1 className="font-montserrat text-3xl primary-text text-center w-full max-w-full mt-20">Event Gallery</h1> 
                 
-            <div className="h-[110vh] w-full  mt-10 relative max-w-full">
-                <div className="absolute top-0 left-0 border-red-700 b">
+            <div className="eventContainer ">
+                <div className="absolute top-0 left-0 -z-10">
                     <Gallery imgUrl="/temp.jpg" delay="0"/>
                     <Gallery imgUrl="/temp.jpg" delay="1200"/>
                     <Gallery imgUrl="/temp.jpg" delay="500"/>
                 </div>
-                <div className="absolute top-0 left-[2064px]">
+                <div className="absolute top-0 left-[2064px] -z-10">
                     <Gallery imgUrl="/temp.jpg" delay="0"/>
                     <Gallery imgUrl="/temp.jpg" delay="1200"/>
                     <Gallery imgUrl="/temp.jpg" delay="500"/>

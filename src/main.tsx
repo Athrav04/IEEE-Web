@@ -7,6 +7,9 @@ import { ErrorPage, About, Committee, UserPage, Login, Events } from './componen
 import Dashboard from './pages/Dashboard.tsx';
 import { ReactLenis, useLenis } from 'lenis/react'
 import PdfViewer from './components/PdfViewer.tsx';
+import DashboardEvents from './components/Dashboard/DashboardEvents.tsx';
+import DashboardCommittee from './components/Dashboard/DashboardCommittee.tsx';
+
 
 function Lenis({children}:PropsWithChildren) {
 
@@ -19,6 +22,7 @@ function Lenis({children}:PropsWithChildren) {
     </ReactLenis>
   )
 }
+
 
 const router = createBrowserRouter([
   {
@@ -48,7 +52,16 @@ const router = createBrowserRouter([
   },
   {
     path:'/Chapter',
-    errorElement:<ErrorPage />
+    errorElement:<ErrorPage />,
+    children:[
+      {
+        path:'sensor-tech',
+        element:<ErrorPage/>
+      },
+      {
+        path:'computerSociety'
+      }
+    ]
   },
   {
     path:'/join',
@@ -58,7 +71,18 @@ const router = createBrowserRouter([
   {
     path:'/AdminDashboard',
     element:<Dashboard/>,
-    errorElement:<ErrorPage/>
+    errorElement:<ErrorPage/>,
+    children:[
+      {
+        path:'events',
+        element:<DashboardEvents/>,
+        errorElement:<ErrorPage/>
+      },
+      {
+        path:'committee',
+        element:<DashboardCommittee/>
+      }
+    ]
   },
   {
     path:'/events',

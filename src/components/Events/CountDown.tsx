@@ -4,6 +4,7 @@ const CountDown = () => {
     const [countdownStarted,setCountdownStarted] = useState(true);
     const [eventDate,seteventDate] = useState<Date>(new Date(2025,0,12,14,30));
     const [timeRemaining,setTimeRemaining] = useState(0);
+    const [countDownComplete,setCountDownComplete] = useState(false);
 
     useEffect(() => {
         const updateRemainingTime = () => {
@@ -11,15 +12,10 @@ const CountDown = () => {
           const eventTime = new Date(eventDate).getTime();
           let remainingTime = eventTime - currentTime;
       
-          if (remainingTime <= 0) {
-            remainingTime = 0;
-            alert("Countdown complete!");
-          }
-      
           setTimeRemaining(remainingTime);
         };
       
-        if (countdownStarted && eventDate) {
+        if (!countDownComplete && eventDate ) {
           updateRemainingTime(); // Calculate immediately on mount
           const countdownInterval = setInterval(updateRemainingTime, 1000);
       

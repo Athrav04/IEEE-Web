@@ -7,7 +7,7 @@ import UserPage from './UserPage'
 import UserForm from './UserForm'
 import Events from '../pages/Events'
 import Acheivements from './Acheivements'
-import LeftSidebar from './LeftSidebar/LeftSidebar'
+import LeftSidebar from './Dashboard/LeftSidebar'
 
 
 

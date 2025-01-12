@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import EventsCard from '../components/Events/EventsCard';
-import hackathons from '../../public/hackathons.svg'
-import workshops  from '../../public/workshops.svg'
-import networking from '../../public/networking.svg'
+import hackathons from '/hackathons.svg'
+import workshops  from '/workshops.svg'
+import networking from '/networking.svg'
 import { GoDot, GoDotFill } from 'react-icons/go';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import Highlights from '../components/Highlights';
@@ -72,7 +72,7 @@ const Home = (props: { src: string }) => {
               <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2  group-hover:translate-x-1 transition-transform duration-300 ease-in-out' onClick={()=>navigate('/about')}></img>
             </div>
          </div>
-         <div className='hidden  md:block w-3/4  h-full opacity-50 object-cover'>
+         <div className='hidden  md:block w-3/4  h-full opacity-50 object-cover '>
             <img src='/electricalTempLogo.jpg' className='min-w-full h-full block gradient-mask-l-0'></img>
          </div>
         </section>

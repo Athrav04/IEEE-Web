@@ -9,7 +9,7 @@ const About = () => {
       </div>
 
 
-      <div className='h-screen w-full flex flex-col justify-center items-center text-center relative'>
+      <div className='h-[90vh] w-full flex flex-col justify-center items-center text-center relative'>
         {/* <div className='bg-blue-500 about-bg  ml-44 mb-20 animate-blob'></div>
         <div className='bg-blue-500 about-bg  ml-64 mb-20 animate-blob delay-2000'></div>
         <div className='bg-yellow-500 about-bg mr-56 mt-20 animate-blob delay-3000'></div> */}
