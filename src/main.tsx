@@ -2,13 +2,14 @@ import { StrictMode , PropsWithChildren } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import {createBrowserRouter , RouterProvider} from 'react-router-dom';
+import { createBrowserRouter , RouterProvider} from 'react-router-dom';
 import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
 import Dashboard from './pages/Dashboard.tsx';
 import { ReactLenis, useLenis } from 'lenis/react'
 import PdfViewer from './components/PdfViewer.tsx';
 import DashboardEvents from './components/Dashboard/DashboardEvents.tsx';
 import DashboardCommittee from './components/Dashboard/DashboardCommittee.tsx';
+
 
 
 function Lenis({children}:PropsWithChildren) {
@@ -92,9 +93,31 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
 
-    <RouterProvider fallbackElement={<ErrorPage/>} router={router}/>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path='/' element={<App src={''}/>}></Route>
+    //     <Route path='/about' element={<About />}></Route>
+    //     <Route path='/committee' element={<Committee src={''}/>} ></Route>
+    //     <Route path='/login' element={<Login />}></Route>
+    //     <Route path='/events' element={<Events />}></Route>
+    //     <Route path='/AdminDashboard'>
+    //       <Route index element={<Dashboard/>}/>
+    //       <Route path='/committee' element={<DashboardCommittee/>}></Route>
+    //       <Route path='/events' element={<DashboardEvents/>}/>
+    //     </Route>
+    //     <Route path='/join' element={<PdfViewer pdf={'/IEEE Membership Step by Step Representatin.pdf'}/>}></Route>
+    //     <Route path='/Chapter'>
+    //       <Route path='/sensor-tech' element={<ErrorPage />}></Route>
+    //       <Route path='/computerSociety' element={<ErrorPage />}></Route>
+    //     </Route>
+    //   </Routes>
+    
 
-  </StrictMode>,
+    // </BrowserRouter>
+    <StrictMode>
+      <RouterProvider  router={router} />
+    </StrictMode>
+
+
 )

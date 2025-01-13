@@ -16,33 +16,128 @@ type committee = {
 
 const team:committee[] = [
   {
-    name:'Darshith Shetty',
-    role:'Event Joint Head',
-    team:Team.Event
+    name:'Pragati Patil',
+    role:'Chairperson',
+    team:Team.Core
   },
   {
-    name:'Darshith Shetty',
-    role:'Event Joint Head',
-    team:Team.Event
+    name:'Sakshi Girase',
+    role:'Vice Chairperson',
+    team:Team.Core
   },
   {
-    name:'Darshith Shetty',
-    role:'Event Joint Head',
+    name:'Pratik Yadav',
+    role:'Secretary',
     team:Team.Core
   },
   {
     name:'Darshith Shetty',
-    role:'Event Joint Head',
+    role:'Joint Secretary',
     team:Team.Core
   },
   {
-    name:'Darshith Shetty',
+    name:'Atharva Joshi',
+    role:'Treasurer',
+    team:Team.Core
+  },
+  {
+    name:'Mayuresh Marade',
+    role:'Joint Treasurer',
+    team:Team.Core
+  },
+  {
+    name:'Apratim Phadke',
+    role:'General Manager',
+    team:Team.Core
+  },
+  {
+    name:'Anushka Gargelwar',
+    role:'Event Head',
+    team:Team.Event
+  },
+  {
+    name:'Shrey Jamadagni',
     role:'Event Joint Head',
+    team:Team.Event
+  },
+  {
+    name:'Ayush Kale',
+    role:'Event Associate',
+    team:Team.Event
+  },
+  {
+    name:'Rushikesh Pagere',
+    role:'Event Associate',
+    team:Team.Event
+  },
+  {
+    name:'Shravani Kurkute',
+    role:'Design Head',
+    team:Team.Design
+  },
+  {
+    name:'Anish Desai',
+    role:'Design Joint Head',
+    team:Team.Design
+  },
+  {
+    name:'Anushree Joshi',
+    role:'Design Associate',
+    team:Team.Design
+  },
+  {
+    name:'Anushree Bhosale',
+    role:'Design Associate',
+    team:Team.Design
+  },
+  {
+    name:'Abhishek Mallav',
+    role:'Technical Head',
     team:Team.Tech
   },
   {
-    name:'Darshith Shetty',
-    role:'Event Joint Head',
+    name:'Chinmay Chavan',
+    role:'Joint Technical Head',
+    team:Team.Tech
+  },
+  {
+    name:'Daksh Tiwary',
+    role:'Technical Associate',
+    team:Team.Tech
+  },
+  {
+    name:'Rushikesh Ade',
+    role:'Technical Associate',
+    team:Team.Tech
+  },
+  {
+    name:'Divya Rewade',
+    role:'Video Editing Head',
+    team:Team.Video
+  },
+  {
+    name:'Rohit Shinde',
+    role:'Video Eiditin Joing Head',
+    team:Team.Video
+  },
+  {
+    name:'Atharva Khandagale',
+    role:'Web Dev Head',
+    team:Team.WebDev
+  },
+  {
+    name:'Chetan Kotangle',
+    role:'Web Dev Joint Head',
+    team:Team.WebDev
+  },
+  {
+    name:'Pranita Bhor',
+    role:'Web Dev Assocaite',
+    team:Team.WebDev
+  },
+  {
+    name:'Shatavali Bahadure',
+    role:'Web Dev Assocaite',
     team:Team.WebDev
   }
 ]

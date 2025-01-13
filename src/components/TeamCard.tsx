@@ -17,8 +17,8 @@ const TeamCard = (props:TeamCardProps) => {
   return (
     <div className='h-64 w-64 mt-5'>
         <img src='/man.jpg' className='rounded-lg object-cover h-56 w-full opacity-85'></img>
-          <h1 className='text-white font-icona mt-2'>Darshith Shetty</h1>
-          <h2 className='secondary-text font-light font-roboto leading-none'>Event Joint Head</h2>
+          <h1 className='text-white font-icona mt-2'>{props.name}</h1>
+          <h2 className='secondary-text font-light font-roboto leading-none'>{props.role}</h2>
           <div className='flex gap-2 ternary-text text-sm mt-1 leading-none'><FaInstagram className='hover:text-white'/><FaLinkedin className='hover:text-white'/><MdMailOutline className='hover:text-white'/></div>
     </div>
     // <div className={`h-64 w-64  relative inset-0`}> 
