@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import EventsCard from '../components/Events/EventsCard';
 import hackathons from '/hackathons.svg'
 import workshops  from '/workshops.svg'
@@ -7,6 +7,8 @@ import networking from '/networking.svg'
 import { GoDot, GoDotFill } from 'react-icons/go';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import Highlights from '../components/Highlights';
+import axios from 'axios';
+import { motion } from 'motion/react';
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
@@ -54,6 +56,15 @@ const eventCards:cards[] = [
 
  
 const Home = (props: { src: string }) => {
+
+  const [imgUrl,setImgUrl] = useState<string>();
+
+  useEffect(()=>{
+   const fetchImage =  ()=>{
+   axios.get("http://localhost:3001/teamData/HeroImage").then((res)=>{if(res.status === 200){console.log(res.data); setImgUrl(res.data);} else return null}).catch((err)=>{console.log("error while fething image",err)});
+   } 
+   fetchImage();
+  },[])
   const eventData = useState<eventInfo>();
   const navigate = useNavigate()
   const src = props.src;
@@ -64,16 +75,25 @@ const Home = (props: { src: string }) => {
         {//================================== Hero Section ===================================
         }
         <section className='flex justify-center items-center w-full h-screen'>
-        <div className='flex-col ml-2 md:ml-10 md:w-1/2 justify-center md:justify-start items-center xl:w-ful'>
-            <h1 className=' text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'>IEEE VIIT</h1>
-            <h2 className=' text-2xl md:text-6xl mt-1 font-light text-nowrap'>Student Branch</h2>
-            <div className='flex  group items-center w-40'>
+        <div className='flex-col ml-2 md:ml-10 md:w-1/2 justify-center md:justify-start items-center z-10'>
+            <motion.h1 className=' overflow-hidden text-5xl md:text-8xl font-montserrat font-bold bg-gradient-to-tr from-[#5899E2] to-[#FFFFFF] bg-clip-text text-transparent text-nowrap'
+             initial={{x:"-100%",opacity:0}} 
+             animate={{x:'0',opacity:1}} 
+             transition={{ease:"easeInOut",duration:1}}>IEEE VIIT</motion.h1>
+            <motion.h2 className=' text-2xl md:text-6xl mt-1 font-light text-nowrap'
+             initial={{x:"-150%",opacity:0}} 
+             animate={{x:'0',opacity:1}} 
+             transition={{ease:"easeInOut",duration:1,delay:0.2}}>Student Branch</motion.h2>
+            <motion.div className='flex  group items-center w-40'
+             initial={{x:"-150%",opacity:0}} 
+             animate={{x:'0',opacity:1}} 
+             transition={{ease:"easeInOut",duration:1,delay:0.2}}>
               <p className='font-montserrat px-1 cursor-default md:text-lg  group-hover:border-b-2 text-center transition duration-200 ease-in' onClick={()=>navigate('/about')}>About us</p>
               <img src='/right-arrow.png' height={25} width={40} className=' w-7 md:w-11 pl-2  group-hover:translate-x-1 transition-transform duration-300 ease-in-out' onClick={()=>navigate('/about')}></img>
-            </div>
+            </motion.div>
          </div>
-         <div className='hidden  md:block w-3/4  h-full opacity-50 object-cover '>
-            <img src='/electricalTempLogo.jpg' className='min-w-full h-full block gradient-mask-l-0'></img>
+         <div className='hidden  md:block w-11/12  h-full opacity-50 object-cover '>
+            <img src={imgUrl} className='min-w-full h-full block gradient-mask-l-50'></img>
          </div>
         </section>
 
@@ -119,73 +139,19 @@ const Home = (props: { src: string }) => {
           </div>
         </section>
 
-        {/* TODO: rethink and redo this section */}
-        {/* <section className='mt-20 h-screen w-full'>
-            <div className='flex justify-start items-start ml-10 font-icona'>
-              <h1 className='text-7xl primary-text ml-10'>EVENT NAME</h1>
-            </div>
-
-
-            <div className='flex justify-between items-center mt-32 ml-32'>
-
-
-
-              <div className='flex'>
-
-                <div className="flex-col">
-                <h1 className='text-5xl  font-medium font-poppins eventDateText'>Thursday</h1>
-                  <span className='flex flex-col items-start mt-12'>
-                    <h2 className='text-[170px] font-poppins font-bold eventDateText leading-none '>25</h2>
-                    <h2 className='text-7xl font-medium font-poppins eventDateText leading-none -mt-5'>OCTOBER</h2>
-                  </span>
-                </div>
-
-                <span className='bg-[#f1fffa] w-[0.5px] mx-10' />
-
-                <div className='flex flex-col flex-nowrap justify-center items-center '>
-                    <h1 className='text-5xl eventDateText font-poppins font-medium text-nowrap'>08:00 AM</h1>
-                    <h1 className='text-5xl eventDateText font-poppins font-medium mt-2'>C001</h1>
-                </div>
-
-              </div>
-
-
-              <div className='flex flex-col justify-center items-center mx-20 w-full h-full'>
-                  <div className='flex text-xl items-center font-oswald primary-text'>
-                  <GoDotFill/><span className='ml-1 mr-5'>ROBOTICS</span>  <GoDotFill/><span className='ml-1 mr-5'>ARDUINO</span>  <GoDotFill/><span className='ml-1 mr-5'>IMAGE SENSORS</span>
-                  </div>
-
-                  <div className='text-left'>
-                    <p className='mt-5 font-oswald ternary-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum tempore placeat asperiores. Sunt, perspiciatis, doloremque explicabo optio reiciendis laudantium esse doloribus harum soluta amet natus excepturi, modi laborum rem cumque.
-                    Nulla molestiae soluta voluptas quasi eveniet nihil minus, quos doloribus harum porro perferendis unde assumenda dolor natus hic doloremque rem eius nisi? Distinctio cupiditate quo libero dignissimos neque ut et!
-                    </p>
-                    <div className='flex gap-6 mt-5 font-roboto text-lg '>
-                      <button className=' text-center bg-[#E6E6E6] hover:bg-white rounded-lg text-black px-5 leading-8'>Register Now</button> 
-                      <button className='text-center flex items-center bg-gradient-to-tr from-[#FFFFFF] to-[#141516] bg-clip-text text-transparent group'>Set Reminder </button>
-                    </div>
-                  </div>
-                   
-              </div>
-            </div>
-            
-        </section> */}
-
-
-        <section className='h-[105vh] w-full mt-8 gradient-mask-b-70'>
+      
+        {/* <section className='h-[105vh] w-full mt-8 gradient-mask-b-70'>
           <div className='ml-12'>
           <h1 className='text-6xl primary-text font-montserrat font-medium'>This Week's Highlight</h1>
               <p className='ternary-text text-xl font-roboto mt-5 w-2/3 font-light'>Checkout this week's articles from Students and <span className=' text-xl font-roboto inline-block primary-text underline hover:cursor-pointer' onClick={()=>redirect()}>IEEE Members</span> and gain insightful knowledge on topics ranging from electronics to Tech.</p>
           </div>
 
 
-          <div className='w-full flex flex-col justify-start items-center mt-20 gap-12'>
+          {/* <div className='w-full flex flex-col justify-start items-center mt-20 gap-12'>
             <Highlights/>
              
-          </div>
-              
-        </section>
-
-
+          </div> */}
+        {/* </section> */}
 
     </div>
     </>

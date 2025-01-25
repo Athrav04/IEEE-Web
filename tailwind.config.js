@@ -19,7 +19,10 @@ export default {
         animatedGradient:{
           '0%':{backgroundPosition:'0% 50%'},
           '100%':{backgroundPosition:'100% 50%'}
-        
+        },
+        animatedButton:{
+          '0%':{backgroundPosition:'0% 0%'},
+          '100%':{backgroundPosition:'100% 100%'}
         },
         blob:{
           '0%':{transform:'translate(0px,0px) scale(1)'},
@@ -51,7 +54,8 @@ export default {
         gradient:'animatedGradient 3s linear infinite',
         conic:'conicSpin 10s linear infinite',
         blob:'blob 25s infinite',
-        cardSlider:'cardSlider 30s linear infinite forwards'
+        cardSlider:'cardSlider 30s linear infinite forwards',
+        animatedButton:'animatedButton 3s linear infinite'
       },
       backgroundSize: {
         'auto':'auto',
@@ -66,6 +70,7 @@ export default {
         poppins: ["Poppins"],
         oswald: ["Oswald"],
         Genome: ["Genome"],
+        SpaceGrotesk: ["Space Grotesk"],
       },
     },
   },

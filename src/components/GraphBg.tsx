@@ -27,9 +27,32 @@ const GraphBg = () => {
         <span className="graph-column-item"></span>
         <span className="graph-column-item"></span>
         <span className="graph-column-item"></span>
+        <span className="graph-column-item"></span>
+        <span className="graph-column-item"></span>
+        <span className="graph-column-item"></span>
+        <span className="graph-column-item"></span>
+        <span className="graph-column-item"></span>
+        <span className="graph-column-item"></span>
+        
         
     </div>
     <div className="graph-row-container">
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
+        <span className="graph-row-item"></span>
         <span className="graph-row-item"></span>
         <span className="graph-row-item"></span>
         <span className="graph-row-item"></span>

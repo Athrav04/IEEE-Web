@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,6 +36,10 @@
     background-size: 300% 300%;
     background-clip: text;
 }
+.gradient-button {
+    background-image: linear-gradient(to top right,#FFFFFF 10%,#2b81e5 30% 50%,#FFFFFF 90%);
+    background-size: 200% 200%;
+}
 .translucent-card {
     background-image: linear-gradient(to bottom right,#252627,#08090a);
     border: 0.5px solid #484849;
@@ -55,7 +59,7 @@
 }
 
 .about-bg{
-    @apply rounded-full -rotate-12 h-72 w-72 absolute filter blur-xl opacity-75 
+    @apply rounded-full -rotate-12 h-32 w-32 md:h-72 md:w-72 absolute filter blur-2xl opacity-75 
 }
 .delay-2000 {
     animation-delay: 2000ms;
@@ -102,11 +106,6 @@
 }
 
 
-
-
-
-
-
 .graph-container {
     @apply absolute top-0 left-0 w-full  h-full -z-10
 }
@@ -115,7 +114,7 @@
 }
 .graph-column-item {
     border-left: 0.5px solid hsla(240deg, 5%, 67%, 0.1);
-    flex: 0 0 70px;
+    flex: 0 0 100px;
 }
 
 .graph-row-container {
@@ -127,8 +126,11 @@
 }
 .graph-row-item {
     border-top: .5px solid hsla(240deg, 5%, 67%, 0.1);
-    flex: 0 0 70px;
+    flex: 0 0 100px;
 }
+
+
+
 
 
 }
