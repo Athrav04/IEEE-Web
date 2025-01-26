@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
+import { useState } from 'react'
+
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom'
 

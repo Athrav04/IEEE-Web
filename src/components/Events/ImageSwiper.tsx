@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { EffectCards } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -9,10 +9,10 @@ import axios from 'axios';
 
 const ImageSwiper = () => {
   const [imageUrls,setImageUrls] = useState([]);
-
+  const baseUrl = import.meta.env.VITE_BACKEND_BASE_URL ;
   useEffect(()=>{
     const getImageUrl = async()=>{
-      await axios.get("http://localhost:3001/eventData/getHeroImages").then((res)=>{setImageUrls(res.data)});
+      await axios.get(`${baseUrl}/eventData/getHeroImages`).then((res)=>{setImageUrls(res.data)});
     }
     getImageUrl();
   },[])

@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { FaInstagram } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { MdMailOutline } from 'react-icons/md'
-import { Team } from '../../pages/Committee'
+
 
 
 type TeamCardProps = {

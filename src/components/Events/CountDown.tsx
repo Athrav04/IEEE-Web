@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const CountDown = () => {
     const [countdownStarted,setCountdownStarted] = useState(true);

@@ -1,17 +1,12 @@
-import { StrictMode , PropsWithChildren, useState } from 'react'
+import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter , Outlet, RouterProvider} from 'react-router-dom';
 import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
-import Dashboard from './pages/Dashboard.tsx';
-import { ReactLenis, useLenis } from 'lenis/react'
 import PdfViewer from './components/PdfViewer.tsx';
-import DashboardEvents from './components/Dashboard/DashboardEvents.tsx';
-import DashboardCommittee from './components/Dashboard/DashboardCommittee.tsx';
 import NavBar from './components/NavBar/NavBar.tsx';
 import NavBarMob from './components/NavBar/NavBarMob.tsx';
-import EventPage from './components/Events/EventPage.tsx';
 import { motion } from 'motion/react';
 
 
@@ -93,29 +88,6 @@ const router = createBrowserRouter([
             path:'/join',
             element:<PdfViewer pdf='\IEEE Membership Step by Step Representation.pdf'/>,
             errorElement:<ErrorPage/>
-          },
-          {
-            path:'/AdminDashboard',
-            element:<Dashboard/>,
-            errorElement:<ErrorPage/>,
-            children:[
-              {
-                path:'events',
-                element:<DashboardEvents/>,
-                errorElement:<ErrorPage/>,
-                children:[
-                  {
-                    path:"event/:eventId",
-                    element:<EventPage/>,
-                    errorElement:<ErrorPage/>
-                  }
-                ]
-              },
-              {
-                path:'committee',
-                element:<DashboardCommittee/>
-              }
-            ]
           },
           {
             path:'/events',

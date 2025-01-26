@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Cards from '../components/Cards'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar/NavBar'
+import  { useEffect, useState } from 'react'
+
 import TeamCard from '../components/Committee/TeamCard'
 import GraphBg from '../components/GraphBg'
 import axios from 'axios'
-import NavBarMob from '../components/NavBar/NavBarMob'
+
 import LoadingTeamCard from '../components/Committee/LoadingTeamCard'
 
 
@@ -23,17 +21,17 @@ type committee = {
 
 
 const Committee = (props: { src: string}) => {
-  const [active,setActive] = useState();
   const [members,setMembers] = useState<[committee]>();
   const [loading , setLoading] = useState(true);
   const [filter,setFilter] = useState<Team>(Team.All);
 
   const loadingArray:number[] = new Array(9).fill(0)
+  const baseUrl = import.meta.env.VITE_BACKEND_BASE_URL ;
 
   useEffect(()=>{
     async function fetchData(){
       setLoading(true);
-      const response = await axios.get("http://localhost:3001/teamData/getUsers");
+      const response = await axios.get(`${baseUrl}/teamData/getUsers`);
       if(response.status === 200){
         setMembers(response.data);
         setLoading(false);
@@ -79,7 +77,7 @@ const Committee = (props: { src: string}) => {
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-8 pl-5 md:gap-12 w-full md:w-2/3 h-full mr-10 md:ml-20'>
             {
               members && members.length> 0 && !loading ? (
-                members!.map((member,index)=>{
+                members!.map((member)=>{
                   return filter === Team.All ?  (<TeamCard name={member.name} role={member.position} team={member.domain} image={member.imgUrl} key={member._id}/> )
                   :  member.domain === filter ? <TeamCard name={member.name} role={member.position} team={member.domain} image={member.imgUrl} key={member._id}/>  
                   : null

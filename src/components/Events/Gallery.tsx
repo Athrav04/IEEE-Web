@@ -1,7 +1,6 @@
-import { useState } from "react";
+
 
 const Gallery = ({imgUrl,delay}:{imgUrl:string,delay:string}) => {
-  const [showModal,setShowModal] = useState(false);
   return (
     <div className={`eventSlider animate-cardSlider`} style={{animationDelay:`${delay}ms`}}>
       <div className="eventsFloatingCard hover:cursor-pointer rounded-lg">

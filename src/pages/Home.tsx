@@ -1,26 +1,18 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import EventsCard from '../components/Events/EventsCard';
-import hackathons from '/hackathons.svg'
-import workshops  from '/workshops.svg'
-import networking from '/networking.svg'
-import { GoDot, GoDotFill } from 'react-icons/go';
-import { MdKeyboardArrowRight } from 'react-icons/md';
-import Highlights from '../components/Highlights';
+import hackathons from '/hackathons.svg';
+import workshops  from '/workshops.svg';
+import networking from '/networking.svg';
+
+
 import axios from 'axios';
 import { motion } from 'motion/react';
 //Gradient text - #5899E2 to #FFFFFF
 //#1e90ff to # 99BADD
 //#4169e1 to #89CFF0
 
-type eventInfo = {
-  name:string,
-  day:string,
-  date:string,
-  time:string,
-  venue:string,
-  description:string
-}
+
 
 type cards = {
   imageUrl:string,
@@ -59,15 +51,17 @@ const Home = (props: { src: string }) => {
 
   const [imgUrl,setImgUrl] = useState<string>();
 
+const baseUrl = import.meta.env.VITE_BACKEND_BASE_URL ;
+
   useEffect(()=>{
    const fetchImage =  ()=>{
-   axios.get("http://localhost:3001/teamData/HeroImage").then((res)=>{if(res.status === 200){console.log(res.data); setImgUrl(res.data);} else return null}).catch((err)=>{console.log("error while fething image",err)});
+   axios.get(`${baseUrl}/teamData/HeroImage`).then((res)=>{if(res.status === 200){ setImgUrl(res.data);} else return null}).catch((err)=>{console.log("error while fething image",err)});
    } 
    fetchImage();
   },[])
-  const eventData = useState<eventInfo>();
+
   const navigate = useNavigate()
-  const src = props.src;
+
   return (
     <>
     <div className='main-bg min-h-screen text-white flex-col '>

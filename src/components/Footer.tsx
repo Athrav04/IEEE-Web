@@ -1,7 +1,7 @@
 const Footer = (props: { fb: string, ig: string, x: string, linkedIn: string })=>{
     return(
         <>
-        <footer className="grid md:grid-cols-3 md:place-items-baseline bg-[#08090a] border-t-[0.5px] border-[#373737] text-white font-thin md:mx-9">
+        <footer className=" w-full grid md:grid-cols-3 md:place-items-baseline bg-[#08090a] border-t-[0.5px] border-[#373737] text-white font-thin">
             <div className="m-7">
                 <ul>
                     <p className="font-semibold md:my-7">Quick Links</p>

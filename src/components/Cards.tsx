@@ -1,4 +1,3 @@
-import React from "react";
 
 const Cards = (props: {profile:string}) => {
     let profile = props.profile;

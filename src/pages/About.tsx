@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import NavBar from '../components/NavBar/NavBar'
-import NavBarMob from '../components/NavBar/NavBarMob';
+import  { useEffect, useState } from 'react'
+
 import Footer from '../components/Footer';
 import axios from 'axios';
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { NavLink, Navigate , redirect, useNavigate} from "react-router-dom";
+
+import { NavLink, useNavigate} from "react-router-dom";
 
 function NavBar({handleShowNavBar,showMobile}:{handleShowNavBar:()=>void,showMobile:boolean}){
 

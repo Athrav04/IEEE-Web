@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Upcoming = ({date,time}:{date:string,time:string}) => {
   return (
