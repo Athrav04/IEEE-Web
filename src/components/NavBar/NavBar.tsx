@@ -4,7 +4,6 @@ import { NavLink, useNavigate} from "react-router-dom";
 
 function NavBar({handleShowNavBar,showMobile}:{handleShowNavBar:()=>void,showMobile:boolean}){
 
-    const [showModal,setShowModal] = useState(false);
     const [navBg, setNavBg ] = useState(false);
     let navigate = useNavigate();
     const changeToTransparent = ()=>{
@@ -17,10 +16,6 @@ function NavBar({handleShowNavBar,showMobile}:{handleShowNavBar:()=>void,showMob
 
     const redirect = ()=>{
         window.open(`${window.location.origin}/join`,'_blank')
-    }
-
-    const handleModal = ()=>{
-        setShowModal(!showModal);
     }
 
 

@@ -2,8 +2,8 @@ import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { createBrowserRouter , Outlet, RouterProvider} from 'react-router-dom';
-import { ErrorPage, About, Committee, UserPage, Login, Events } from './components/config.ts'
+import { createBrowserRouter , Outlet, RouterProvider, useLocation} from 'react-router-dom';
+import { ErrorPage, About, Committee, Login, Events } from './components/config.ts'
 import PdfViewer from './components/PdfViewer.tsx';
 import NavBar from './components/NavBar/NavBar.tsx';
 import NavBarMob from './components/NavBar/NavBarMob.tsx';
@@ -11,6 +11,7 @@ import { motion } from 'motion/react';
 
 
 function Layout(){
+  const location = useLocation();
   const [showNavBar,setShowNavBar] = useState(false);
   function handleShowNavBar(){
     setShowNavBar((prev)=>!prev)
@@ -19,7 +20,7 @@ function Layout(){
   return (
     <div className='relative'>
     <div className='overflow-x-hidden h-auto absolute left-0 w-full top-0 z-[100]'>
-        <NavBar handleShowNavBar={handleShowNavBar} showMobile={showNavBar}/>
+       {location.pathname !== '/join' ? <NavBar handleShowNavBar={handleShowNavBar} showMobile={showNavBar}/> : null } 
         
         </div> 
         {showNavBar &&
@@ -59,11 +60,6 @@ const router = createBrowserRouter([
           {
             path:'/committee',
             element:<Committee src={'\committee-bg.jpg'}/>,
-            errorElement:<ErrorPage />
-          },
-          {
-            path:'User/:userId',
-            element:<UserPage />,
             errorElement:<ErrorPage />
           },
           {

@@ -1,11 +1,7 @@
-import { useForm, SubmitHandler, Validate } from "react-hook-form"
+import { useForm, SubmitHandler } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 
 
-type Inputs = {
-  example: string
-  exampleRequired: string
-}
 type loginValidation = {
     userId : number,
     userName : string,
@@ -17,7 +13,7 @@ export default function UserForm() {
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm<loginValidation>()
   const onSubmit: SubmitHandler<loginValidation> = (data) => console.log(data)

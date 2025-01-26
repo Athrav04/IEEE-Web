@@ -1,16 +1,10 @@
-import NavBar from "./components/NavBar/NavBar";
+
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import './App.css';
-import NavBarMob from './components/NavBar/NavBarMob';
-import { useState } from "react";
+
 
 function App(props: { src: string }) {
-  const [showNavBar,setShowNavBar] = useState(false);
-
-  const handleShowNavBar = ()=>{
-    setShowNavBar((prev)=>!prev)
-  }
 
 
   const src = props.src;

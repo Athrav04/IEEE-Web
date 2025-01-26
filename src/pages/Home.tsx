@@ -21,10 +21,6 @@ type cards = {
   content:string
 }
 
-const redirect = ()=>{
-  window.open(`${window.location.origin}/join`,'_blank')
-}
-
 const eventCards:cards[] = [
   {
     imageUrl:'/hackthons.jpg',
@@ -46,7 +42,7 @@ const eventCards:cards[] = [
   }
 ]
 
- 
+ //@ts-ignore
 const Home = (props: { src: string }) => {
 
   const [imgUrl,setImgUrl] = useState<string>();

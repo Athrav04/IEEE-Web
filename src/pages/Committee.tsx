@@ -19,7 +19,7 @@ type committee = {
 
 
 
-
+//@ts-ignore
 const Committee = (props: { src: string}) => {
   const [members,setMembers] = useState<[committee]>();
   const [loading , setLoading] = useState(true);
