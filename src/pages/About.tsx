@@ -12,13 +12,15 @@ type imgUrl = {
 const About = () => {
   const [imgUrl,setImgUrl] = useState<imgUrl>();
 
+const baseUrl = import.meta.env.VITE_BACKEND_BASE_URL ;
+
   useEffect(()=>{
     const fetchData = async ()=>{
     try{
       const responses = await Promise.all([
-        axios.get('http://localhost:3001/teamData/getImage?img=Teacher1.jpg'),
-        axios.get('http://localhost:3001/teamData/getImage?img=Teacher2.jpg'),
-        axios.get('http://localhost:3001/teamData/getImage?img=Director.jpg')
+        axios.get(`${baseUrl}/teamData/getImage?img=Teacher1.jpg`),
+        axios.get(`${baseUrl}/teamData/getImage?img=Teacher2.jpg`),
+        axios.get(`${baseUrl}/teamData/getImage?img=Director.jpg`)
       ])
       const urls = {
         Teacher1:responses[0].data,

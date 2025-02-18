@@ -24,7 +24,7 @@ function NavBar({handleShowNavBar,showMobile}:{handleShowNavBar:()=>void,showMob
     return(
         <>
             <div className={`w-screen md:w-screen h-auto z-20 text-white flex justify-between ${showMobile || navBg ? 'backdrop-blur-2xl':'bg-transparent'}  px-3 py-4`}>
-                <img className='object-contain h-14 p-2 md:h-20 lg:h-22 lg:pl-4 hover:cursor-pointer' src='public\IEEE_white_logo.webp' alt='ieee-logo' onClick={()=>navigate('/')}/>
+                <img className='object-contain h-14 p-2 md:h-20 lg:h-22 lg:pl-4 hover:cursor-pointer' src='IEEE_white_logo.webp' alt='ieee-logo' onClick={()=>navigate('/')}/>
                     <div className={`hidden md:flex justify-center items-center h-12`}>
                         <NavLink to={'/about'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold ":"navBar-Item hover:text-white"}}>About </NavLink>
                         <NavLink to={'/committee'} className={(e)=>{return e.isActive ? " text-white navBar-Item font-semibold":"navBar-Item  hover:text-white"}}>Committee </NavLink>
